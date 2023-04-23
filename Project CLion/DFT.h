@@ -5,6 +5,7 @@
 #ifndef PROJECT_CLION_DFT_H
 #define PROJECT_CLION_DFT_H
 
+#define N 64
 
 class DFT {
 
