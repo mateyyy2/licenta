@@ -3,12 +3,14 @@
 #include <complex>
 #include <vector>
 
+#include <thread>
+
 #include <unistd.h>
 #include <cpuid.h>
 
 using namespace std;
 
-
+// old
 int getThreadCount() {
     //return sysconf(_SC_NPROCESSORS_ONLN);
 
@@ -26,7 +28,7 @@ vector<complex<double>> DFT(vector<complex<double>> X) { // qubytes
     int K = N;
 
     // allocate memory for internals
-    complex<double> intSum;
+    complex<double> intSum = 0;
 
     // allocate memory for output
     vector<complex<double>> output;
@@ -49,8 +51,281 @@ vector<complex<double>> DFT(vector<complex<double>> X) { // qubytes
     return output;
 }
 
+
+
+
+
+
+
+// new
+const double PI = acos(-1);
+
+vector<complex<double>> computeDFT(const vector<complex<double>>& input) {
+    int N = input.size();
+    vector<complex<double>> output(N);
+
+    for(int k = 0; k < N; k++) {
+        complex<double> sum(0, 0);
+
+        for(int n = 0; n < N; n++) {
+            double angle = 2 * PI * k * n / N;
+
+            complex<double> exp_term(cos(angle), -sin(angle));
+            sum += input[n] * exp_term;
+        }
+
+        output[k] = sum;
+    }
+
+    return output;
+}
+
+//vector<complex<double>> computeDFT(const vector<complex<double>>& input) {
+//    int N = input.size();
+//    std::vector<std::complex<double>> output(N);
+//
+//    for (int k = 0; k < N; ++k) {
+//        for (int n = 0; n < N; ++n) {
+//            double theta = 2 * PI * n * k / N;
+//            std::complex<double> W_n_k(std::cos(theta), -std::sin(theta));
+//            output[k] += input[n] * W_n_k;
+//        }
+//    }
+//
+//    return output;
+//}
+
+//void computeFFTRecursive(vector<complex<double>>& input) {
+//    int N = input.size();
+//    //cout << "N = " << N << endl;
+//    if(N <= 1) return;
+//
+//    // Divide
+//    vector<complex<double>> even(N/2), odd(N/2);
+//    for(int i = 0; i < N / 2; i++) {
+//        even[i] = input[i * 2];
+//        odd[i] = input[i * 2 + 1];
+//    }
+//
+//    // Conquer
+//    computeFFTRecursive(even);
+//    computeFFTRecursive(odd);
+//
+//    // Combine
+//    for(int k = 0; k < N / 2; k++) {
+//        complex<double> t = polar(1.0, -2 * PI * k / N) * odd[k];
+//
+//        input[k] = even[k] + t;
+//        input[k + N / 2] = even[k] - t;
+//    }
+//
+////    for(int i = 0; i < N; i++)
+////        input[i] /= N;
+//}
+
+//void computeFFTRecursive(vector<complex<double>>& input, double scale = 1.0) {
+//    int N = input.size();
+//    //cout << "N = " << N << endl;
+//    if(N <= 1) return;
+//
+//    // Divide
+//    vector<complex<double>> even(N/2), odd(N/2);
+//    for(int i = 0; i < N / 2; i++) {
+//        even[i] = input[i * 2];
+//        odd[i] = input[i * 2 + 1];
+//    }
+//
+//    // Conquer
+//    computeFFTRecursive(even, scale * 2.0);
+//    computeFFTRecursive(odd, scale * 2.0);
+//
+//    // Combine
+//    for(int k = 0; k < N / 2; k++) {
+//        complex<double> t = polar(1.0, -2 * PI * k / N) * odd[k];
+//
+//        input[k] = even[k] + t;
+//        input[k + N / 2] = even[k] - t;
+//    }
+//
+//    for(int i = 0; i < N; i++)
+//        input[i] /= scale;
+//}
+
+// cp-algorithms FFT
+void CP_FFT(vector<complex<double>>& input) {
+    int N = input.size();
+    if(N == 1) return;
+
+    vector<complex<double>> even(N / 2), odd(N / 2);
+    for(int i = 0; 2 * i < N; i++) {
+        even[i] = input[2 * i];
+        odd[i] = input[2 * i + 1];
+    }
+
+    CP_FFT(even);
+    CP_FFT(odd);
+
+    double angle = 2 * PI / N;
+    complex<double> w(1), wn(cos(angle), sin(angle));
+
+    for(int i = 0; i < N / 2; i++) {
+        input[i] = even[i] + w * odd[i];
+        input[i + N / 2] = even[i] - w * odd[i];
+
+        w *= wn;
+    }
+}
+
+void computeFFTRecursive(vector<complex<double>>& input, bool inverted) {
+    int N = input.size();
+    if(N <= 1) return;
+
+    // Divide
+    vector<complex<double>> even(N / 2), odd(N / 2);
+    for(int i = 0; i < N / 2; i++) {
+        even[i] = input[i * 2];
+        odd[i] = input[i * 2 + 1];
+    }
+
+    // Conquer
+    computeFFTRecursive(even, inverted);
+    computeFFTRecursive(odd, inverted);
+
+    // Combine
+    double angle = 2 * PI / N * (inverted ? -1 : 1);
+    complex<double> w(1), wn(cos(angle), sin(angle));
+
+    for(int k = 0; k < N / 2; k++) {
+        input[k] = even[k] + w * odd[k];
+        input[k + N / 2] = even[k] - w * odd[k];
+
+        if(inverted) {
+            input[k] /= 2;
+            input[k + N / 2] /= 2;
+        }
+
+        w *= wn;
+    }
+}
+
+vector<int> polyMultiplicationFFT(vector<complex<double>> const& A, vector<complex<double>> const& B) {
+    int N = 1;
+    // cea mai mica putere a lui 2 > (A.size + B.size - 1)
+    while(N < (A.size() + B.size()))
+        N <<= 1;
+
+    vector<complex<double>> FA(A.begin(), A.end());
+    vector<complex<double>> FB(B.begin(), B.end());
+    //A.resize(N);
+    FA.resize(N);
+    FB.resize(N);
+
+    // evaluam polinoamele
+    computeFFTRecursive(FA, false);
+    computeFFTRecursive(FB, false);
+
+    // multiplicam polinoamele
+    for(int i = 0; i < N; i++)
+        FA[i] *= FB[i];
+
+    // aplicam inverse FFT pentru a afla coeficientii
+    //                              converti produsul pointwise in coeficienti
+    computeFFTRecursive(FA, true);
+
+    // rotunjim coeficientii la int (erori pt complex)
+    vector<int> result(N);
+    for(int i = 0; i < N; i++)
+        result[i] = round(FA[i].real());
+
+    return result;
+}
+
+//void computeFFTRecursive_helper(vector<complex<double>>& input, int N, int s) {
+//    if(N <= 1) return;
+//
+//    // Divide
+//    vector<complex<double>> even(N/2), odd(N/2);
+//    for(int i = 0; i < N / 2; i++) {
+//        even[i] = input[i * 2 * s];
+//        odd[i] = input[(i * 2 + 1) * s];
+//    }
+//
+//    // Conquer
+//    computeFFTRecursive_helper(even, N / 2, s * 2);
+//    computeFFTRecursive_helper(odd, N / 2, s * 2);
+//
+//    // Combine
+//    for(int k = 0; k < N / 2; k++) {
+//        complex<double> t = polar(1.0, -2 * PI * k / N) * odd[k];
+//
+//        input[k * s] = even[k] + t;
+//        input[(k + N / 2) * s] = even[k] - t;
+//    }
+//}
+//
+//vector<complex<double>> computeFFTRecursive(vector<complex<double>> input) {
+//    int N = input.size();
+//
+//    // ensure that N is a power of 2
+//    int powerOfTwo = 1;
+//    while(powerOfTwo < N) powerOfTwo *= 2;
+//    input.resize(powerOfTwo);
+//
+//    computeFFTRecursive_helper(input, powerOfTwo, 1);
+//
+//    for(int i = 0; i < powerOfTwo; i++) {
+//        input[i] /= powerOfTwo;
+//    }
+//
+//    return input;
+//}
+
 int main() {
-    cout << getThreadCount();
+    cout << getThreadCount() << endl;
+
+    vector<complex<double>> input = {
+            {1, 0}, {1, 1}, {0, 1}, {-1, 1},
+            {-1, 0}, {-1, -1}, {0, -1}, {1, -1}
+    };
+
+    vector<complex<double>> test = {1, 4, 9, 16};
+
+    cout << endl << "Test: " << endl;
+    for(const auto& val : test) {
+        cout << val << endl;
+    }
+
+//    vector<complex<double>> outputDFT = computeDFT(input);
+//    vector<complex<double>> outputDFTold = DFT(input);
+//
+//    vector<complex<double>> test = {1, 2, 3, 4};
+//    vector<complex<double>> outputDFTtest = computeDFT(test);
+//
+//    cout << "DFT Results: " << endl;
+//    for(const auto& val : outputDFTtest) {
+//        cout << val << endl;
+//    }
+
+    //computeFFTRecursive(input);
+    //FFT_recursive(input);
+    //vector<complex<double>> outputFFT = computeFFTRecursive(input);
+    //CP_FFT(input);
+    //computeFFTRecursive(input);
+    //computeFFTRecursive(input, false);
+
+    computeFFTRecursive(test, false);
+
+    cout << endl << "FFT Results: " << endl;
+    for(const auto& val : test) {
+        cout << val << endl;
+    }
+
+    computeFFTRecursive(test, true);
+    cout << endl << "Inverted FFT Results: " << endl;
+    for(const auto& val : test) {
+        cout << val << endl;
+    }
+
 
     return 0;
 }
