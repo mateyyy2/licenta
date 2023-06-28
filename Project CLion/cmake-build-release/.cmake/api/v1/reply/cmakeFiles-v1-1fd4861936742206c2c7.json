@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.25.2/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -275,7 +275,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeCCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.25.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -519,7 +519,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -608,7 +608,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeRCCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.25.2/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -687,7 +687,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeCCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.25.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -786,7 +786,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -797,7 +797,7 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/Facultate/Anul IV/Licenta/licenta/Project CLion/cmake-build-debug",
+		"build" : "D:/Facultate/Anul IV/Licenta/licenta/Project CLion/cmake-build-release",
 		"source" : "D:/Facultate/Anul IV/Licenta/licenta/Project CLion"
 	},
 	"version" : 

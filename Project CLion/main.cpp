@@ -3,6 +3,7 @@
 #include <complex>
 #include <vector>
 
+#include <chrono>
 #include <thread>
 
 #include <unistd.h>
@@ -119,9 +120,10 @@ vector<complex<double>> computeDFT(const vector<complex<double>>& input) {
 //        input[k + N / 2] = even[k] - t;
 //    }
 //
-////    for(int i = 0; i < N; i++)
-////        input[i] /= N;
 //}
+//    for(int i = 0; i < N; i++)
+//        input[i] /= N;
+
 
 //void computeFFTRecursive(vector<complex<double>>& input, double scale = 1.0) {
 //    int N = input.size();
@@ -313,6 +315,10 @@ int main() {
     //computeFFTRecursive(input);
     //computeFFTRecursive(input, false);
 
+    chrono::time_point<chrono::high_resolution_clock> startPoint = chrono::high_resolution_clock::now();
+    auto start = chrono::time_point_cast<chrono::microseconds>(startPoint);
+    //auto end = chrono::
+
     computeFFTRecursive(test, false);
 
     cout << endl << "FFT Results: " << endl;
@@ -326,6 +332,15 @@ int main() {
         cout << val << endl;
     }
 
+    chrono::time_point<chrono::high_resolution_clock> endPoint = chrono::high_resolution_clock::now();
+    auto end = chrono::time_point_cast<chrono::microseconds>(endPoint);
+
+    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
+    auto ms = duration * 0.001;
+
+    cout << endl;
+    cout << duration.count() << " us" << endl;
+    cout << ms.count() << " ms" << endl;
 
     return 0;
 }
