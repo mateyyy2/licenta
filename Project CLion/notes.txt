@@ -37,3 +37,19 @@ Large Fibonacci numbers with Matrix Exponentiation
 ---
 TREBUIE UN FAILSAFE PT A VERIFICA CA NUMERELE REZULTATE CHIAR SUNT CORECTE
 
+
+
+
+
+-----
+
+Fibonacci for large numbers
+Miller-Rabin algorithm
+FFT
+
+(integrate FFT into Miller-Rabin ???)
+
+
+OpenMP
+
+Split workload evenly between cores -> performance scales with more cores

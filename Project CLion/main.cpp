@@ -9,7 +9,11 @@
 #include <unistd.h>
 #include <cpuid.h>
 
+#include <omp.h>
+
 using namespace std;
+
+typedef vector<vector<vector<int>>> matrix;
 
 // old
 int getThreadCount() {
@@ -210,7 +214,7 @@ void computeFFTRecursive(vector<complex<double>>& input, bool inverted) {
     }
 }
 
-vector<int> polyMultiplicationFFT(vector<complex<double>> const& A, vector<complex<double>> const& B) {
+vector<int> multiplyPolynomialsFFT(vector<int> const& A, vector<int> const& B) {
     int N = 1;
     // cea mai mica putere a lui 2 > (A.size + B.size - 1)
     while(N < (A.size() + B.size()))
@@ -241,6 +245,28 @@ vector<int> polyMultiplicationFFT(vector<complex<double>> const& A, vector<compl
 
     return result;
 }
+
+//vector<long long> multiplyLargeNumbersFFT(const vector<long long>& a, const vector<long long>& b) {
+//
+//}
+
+//vector<int> addPolynomials(vector<int>& A, vector<int>& B) {
+//    vector<int> result(max(B.size(), B.size()));
+//
+//    for(int i = 0; i < A.size(); i++) {
+//        result[i] += A[i];
+//    }
+//    for(int i = 0; i < B.size(); i++) {
+//        result[i] += B[i];
+//    }
+//
+//    return result;
+//}
+//
+//matrix multiplyMatrix(matrix &A, matrix &B) {
+//    int n = A.size();
+//
+//}
 
 //void computeFFTRecursive_helper(vector<complex<double>>& input, int N, int s) {
 //    if(N <= 1) return;
@@ -282,6 +308,60 @@ vector<int> polyMultiplicationFFT(vector<complex<double>> const& A, vector<compl
 //    return input;
 //}
 
+std::vector<std::complex<double>> generateSinusoidalData(int size, double frequency) {
+    std::vector<std::complex<double>> data(size);
+    for (int i = 0; i < size; ++i) {
+        double t = (double)i / size;
+        double value = std::sin(2 * M_PI * frequency * t);
+        data[i] = std::complex<double>(value, 0);
+    }
+    return data;
+}
+
+void workload() {
+//    vector<complex<double>> test = {
+//            {1, 0}, {1, 1}, {0, 1}, {-1, 1},
+//            {-1, 0}, {-1, -1}, {0, -1}, {1, -1}
+//    };
+
+    std::vector<int> datasetSizes = {1024, 2048, 4096};//, 8192, 16384, 32768};
+    std::vector<double> frequencies = {10.5, 20.25, 40.75, 82.125};
+
+    for(int size : datasetSizes) {
+        for(double freq : frequencies) {
+            vector<complex<double>> data = generateSinusoidalData(size, freq);
+
+            computeFFTRecursive(data, false);
+
+//            cout << endl << "FFT Results: " << endl;
+//            for (const auto &val: data) {
+//                cout << val << endl;
+//            }
+//
+//            computeFFTRecursive(data, true);
+//            cout << endl << "Inverted FFT Results: " << endl;
+//            for (const auto &val: data) {
+//                cout << val << endl;
+//            }
+        }
+    }
+
+//    for(int iterations = 0; iterations < 1000; iterations++) {
+//        computeFFTRecursive(test, false);
+//
+//        cout << endl << "FFT Results: " << endl;
+//        for (const auto &val: test) {
+//            cout << val << endl;
+//        }
+//
+//        computeFFTRecursive(test, true);
+//        cout << endl << "Inverted FFT Results: " << endl;
+//        for (const auto &val: test) {
+//            cout << val << endl;
+//        }
+//    }
+}
+
 int main() {
     cout << getThreadCount() << endl;
 
@@ -315,22 +395,43 @@ int main() {
     //computeFFTRecursive(input);
     //computeFFTRecursive(input, false);
 
+    unsigned int numThreads = thread::hardware_concurrency();
+    vector<thread> threads;
+
+
+
     chrono::time_point<chrono::high_resolution_clock> startPoint = chrono::high_resolution_clock::now();
     auto start = chrono::time_point_cast<chrono::microseconds>(startPoint);
     //auto end = chrono::
 
-    computeFFTRecursive(test, false);
+//    for(unsigned int i = 0; i < numThreads; i++) {
+//        threads.push_back(thread(workload));
+//    }
+//
+//    for(auto &thread : threads) {
+//        if(thread.joinable())
+//            thread.join();
+//    }
 
-    cout << endl << "FFT Results: " << endl;
-    for(const auto& val : test) {
-        cout << val << endl;
+    //int numThreads = omp_get_max_threads();
+    #pragma omp parallel
+    for(int i = 0; i < omp_get_max_threads(); i++) {
+        cout << "Thread " << omp_get_thread_num() << ": " << endl;
+        workload();
     }
 
-    computeFFTRecursive(test, true);
-    cout << endl << "Inverted FFT Results: " << endl;
-    for(const auto& val : test) {
-        cout << val << endl;
-    }
+//    computeFFTRecursive(test, false);
+//
+//    cout << endl << "FFT Results: " << endl;
+//    for(const auto& val : test) {
+//        cout << val << endl;
+//    }
+//
+//    computeFFTRecursive(test, true);
+//    cout << endl << "Inverted FFT Results: " << endl;
+//    for(const auto& val : test) {
+//        cout << val << endl;
+//    }
 
     chrono::time_point<chrono::high_resolution_clock> endPoint = chrono::high_resolution_clock::now();
     auto end = chrono::time_point_cast<chrono::microseconds>(endPoint);
@@ -341,6 +442,10 @@ int main() {
     cout << endl;
     cout << duration.count() << " us" << endl;
     cout << ms.count() << " ms" << endl;
+
+
+    cout << "\n\nthread count = " << thread::hardware_concurrency();
+
 
     return 0;
 }
