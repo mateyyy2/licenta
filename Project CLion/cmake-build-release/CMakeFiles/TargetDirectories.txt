@@ -1,3 +1,0 @@
-D:/Facultate/Anul IV/Licenta/licenta/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir
-D:/Facultate/Anul IV/Licenta/licenta/Project CLion/cmake-build-release/CMakeFiles/edit_cache.dir
-D:/Facultate/Anul IV/Licenta/licenta/Project CLion/cmake-build-release/CMakeFiles/rebuild_cache.dir

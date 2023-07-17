@@ -1,13 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="650b963d-8a30-48ba-aa23-6fab730cf969" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Project CLion/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project CLion/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.idea/Project CLion.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/DFT.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/DFT.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/reply/cache-v2-7e134850ba3e8b93ed44.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c63f3707178aab1bf621.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-97c58ca1880bc422b18b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/reply/index-2023-07-03T16-21-37-0693.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/reply/target-Project_CLion-Debug-1c7070c778163518cf1a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-e15cf892bff6c235560b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/FindOpenMP/ompver_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/FindOpenMP/ompver_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/DFT.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/DFT.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/main.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/objects1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/Project_CLion.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/Project_CLion" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/Project_CLion.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/Project_CLion.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/reply/cache-v2-74c43a68dffcedfb09e4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/reply/cmakeFiles-v1-5cb1040606cdd5457d9c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-592fed3e4e0dc275e8e4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/reply/directory-.-Release-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/reply/index-2023-07-03T16-21-40-0897.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/reply/target-Project_CLion-Release-dea91c39d9b311161c53.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/.cmake/api/v1/reply/toolchains-v1-e15cf892bff6c235560b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/3.25.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/FindOpenMP/ompver_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/FindOpenMP/ompver_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/DFT.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/DFT.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/main.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/objects1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/Project_CLion.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/Project_CLion.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/Project_CLion.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/cmake-build-release/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project CLion/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +173,22 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/Facultate/Anul IV/Licenta/licenta/Project CLion",
+    "last_opened_file_path": "D:/Facultate/Anul IV/Licenta/licenta",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project_CLion" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_CLion" TARGET_NAME="Project_CLion" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_CLion" RUN_TARGET_NAME="Project_CLion">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,6 +198,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687860529560</updated>
       <workItem from="1687860530577" duration="19000" />
+      <workItem from="1689595438394" duration="5000" />
     </task>
     <servers />
   </component>
