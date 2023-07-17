@@ -308,6 +308,76 @@ vector<int> multiplyPolynomialsFFT(vector<int> const& A, vector<int> const& B) {
 //    return input;
 //}
 
+// Fibonacci
+
+// Function to add two large numbers represented as vectors
+vector<int> add(const vector<int>& a, const vector<int>& b) {
+    vector<int> result(max(a.size(), b.size()));
+    int carry = 0;
+    for (int i = 0; i < result.size(); i++) {
+        int sum = carry;
+        if (i < a.size()) sum += a[i];
+        if (i < b.size()) sum += b[i];
+        result[i] = sum % 10;
+        carry = sum / 10;
+    }
+    if (carry) result.push_back(carry);
+    return result;
+}
+
+// Function to multiply a large number (represented as a vector) by a small number
+vector<int> multiply(const vector<int>& a, int b) {
+    vector<int> result(a.size());
+    int carry = 0;
+    for (int i = 0; i < a.size(); i++) {
+        int product = a[i] * b + carry;
+        result[i] = product % 10;
+        carry = product / 10;
+    }
+    if (carry) result.push_back(carry);
+    return result;
+}
+
+vector<int> fib(int N)
+{
+    vector<vector<int>> F1(N+1);
+    F1[1] = {1};
+    F1[2] = {1};
+
+    for (int i = 3; i <= N; i++) {
+        F1[i] = add(F1[i-1], F1[i-2]);
+    }
+
+    return F1[N];
+}
+
+vector<int> fibOMP(int N) {
+    vector<vector<int>> F1(N+1);
+    F1[1] = {1};
+    F1[2] = {1};
+
+#pragma omp parallel
+    {
+#pragma omp single
+        {
+            for (int i = 3; i <= N; i++) {
+#pragma omp task firstprivate(i)
+                {
+                    F1[i] = add(F1[i-1], F1[i-2]);
+                }
+            }
+        }
+    }
+#pragma omp taskwait
+
+    return F1[N];
+}
+
+
+
+
+
+
 std::vector<std::complex<double>> generateSinusoidalData(int size, double frequency) {
     std::vector<std::complex<double>> data(size);
     for (int i = 0; i < size; ++i) {
@@ -319,10 +389,10 @@ std::vector<std::complex<double>> generateSinusoidalData(int size, double freque
 }
 
 void workload() {
-//    vector<complex<double>> test = {
-//            {1, 0}, {1, 1}, {0, 1}, {-1, 1},
-//            {-1, 0}, {-1, -1}, {0, -1}, {1, -1}
-//    };
+    vector<complex<double>> test = {
+            {1, 0}, {1, 1}, {0, 1}, {-1, 1},
+            {-1, 0}, {-1, -1}, {0, -1}, {1, -1}
+    };
 
     std::vector<int> datasetSizes = {1024, 2048, 4096};//, 8192, 16384, 32768};
     std::vector<double> frequencies = {10.5, 20.25, 40.75, 82.125};
@@ -333,37 +403,37 @@ void workload() {
 
             computeFFTRecursive(data, false);
 
-//            cout << endl << "FFT Results: " << endl;
-//            for (const auto &val: data) {
-//                cout << val << endl;
-//            }
-//
-//            computeFFTRecursive(data, true);
-//            cout << endl << "Inverted FFT Results: " << endl;
-//            for (const auto &val: data) {
-//                cout << val << endl;
-//            }
+            cout << endl << "FFT Results: " << endl;
+            for (const auto &val: data) {
+                cout << val << endl;
+            }
+
+            computeFFTRecursive(data, true);
+            cout << endl << "Inverted FFT Results: " << endl;
+            for (const auto &val: data) {
+                cout << val << endl;
+            }
         }
     }
 
-//    for(int iterations = 0; iterations < 1000; iterations++) {
-//        computeFFTRecursive(test, false);
-//
-//        cout << endl << "FFT Results: " << endl;
-//        for (const auto &val: test) {
-//            cout << val << endl;
-//        }
-//
-//        computeFFTRecursive(test, true);
-//        cout << endl << "Inverted FFT Results: " << endl;
-//        for (const auto &val: test) {
-//            cout << val << endl;
-//        }
-//    }
+    for(int iterations = 0; iterations < 1000; iterations++) {
+        computeFFTRecursive(test, false);
+
+        cout << endl << "FFT Results: " << endl;
+        for (const auto &val: test) {
+            cout << val << endl;
+        }
+
+        computeFFTRecursive(test, true);
+        cout << endl << "Inverted FFT Results: " << endl;
+        for (const auto &val: test) {
+            cout << val << endl;
+        }
+    }
 }
 
 int main() {
-    cout << getThreadCount() << endl;
+    //cout << getThreadCount() << endl;
 
     vector<complex<double>> input = {
             {1, 0}, {1, 1}, {0, 1}, {-1, 1},
@@ -372,7 +442,7 @@ int main() {
 
     vector<complex<double>> test = {1, 4, 9, 16};
 
-    cout << endl << "Test: " << endl;
+    cout << endl << "Test Dataset: " << endl;
     for(const auto& val : test) {
         cout << val << endl;
     }
@@ -397,6 +467,7 @@ int main() {
 
     unsigned int numThreads = thread::hardware_concurrency();
     vector<thread> threads;
+    cout << "Hardware Concurrency = " << numThreads << endl;
 
 
 
@@ -414,34 +485,44 @@ int main() {
 //    }
 
     //int numThreads = omp_get_max_threads();
-    #pragma omp parallel
-    for(int i = 0; i < omp_get_max_threads(); i++) {
-        cout << "Thread " << omp_get_thread_num() << ": " << endl;
-        workload();
+//    vector<int> fibResult = fibOMP(250);
+//    #pragma omp parallel
+//    for(int i = 0; i < omp_get_max_threads(); i++) {
+//        cout << "Thread " << omp_get_thread_num() << ": " << endl;
+//        //fibResult = fibOMP(250);
+//        for (auto it = fibResult.rbegin(); it != fibResult.rend(); ++it) {
+//            cout << *it;
+//        }
+//        cout << endl;
+//        workload();
+//    }
+
+    computeFFTRecursive(test, false);
+
+    cout << endl << "FFT Results: " << endl;
+    for(const auto& val : test) {
+        cout << val << endl;
     }
 
-//    computeFFTRecursive(test, false);
-//
-//    cout << endl << "FFT Results: " << endl;
-//    for(const auto& val : test) {
-//        cout << val << endl;
-//    }
-//
-//    computeFFTRecursive(test, true);
-//    cout << endl << "Inverted FFT Results: " << endl;
-//    for(const auto& val : test) {
-//        cout << val << endl;
-//    }
+    computeFFTRecursive(test, true);
+    cout << endl << "Inverted FFT Results: " << endl;
+    for(const auto& val : test) {
+        cout << val << endl;
+    }
+
+    cout << "Running workload...\n";
+    workload();
+    cout << "Workload finished.\n";
 
     chrono::time_point<chrono::high_resolution_clock> endPoint = chrono::high_resolution_clock::now();
     auto end = chrono::time_point_cast<chrono::microseconds>(endPoint);
 
     auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
-    auto ms = duration * 0.001;
+    auto sec = duration * 0.001;
 
     cout << endl;
-    cout << duration.count() << " us" << endl;
-    cout << ms.count() << " ms" << endl;
+    cout << duration.count() * 0.001 << " ms" << endl;
+    cout << sec.count() * 0.001 << " s" << endl;
 
 
     cout << "\n\nthread count = " << thread::hardware_concurrency();
