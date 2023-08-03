@@ -1,1 +1,0 @@
-CMakeLists.txt not found in D:\Facultate\Anul IV\Licenta\licenta\Project CLion Select CMakeLists.txt

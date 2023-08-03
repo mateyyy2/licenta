@@ -128,29 +128,53 @@ Project_CLion/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/build
 .PHONY : Project_CLion/fast
 
-DFT.obj: DFT.cpp.obj
-.PHONY : DFT.obj
+FFT.obj: FFT.cpp.obj
+.PHONY : FFT.obj
 
 # target to build an object file
-DFT.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/DFT.cpp.obj
-.PHONY : DFT.cpp.obj
+FFT.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/FFT.cpp.obj
+.PHONY : FFT.cpp.obj
 
-DFT.i: DFT.cpp.i
-.PHONY : DFT.i
+FFT.i: FFT.cpp.i
+.PHONY : FFT.i
 
 # target to preprocess a source file
-DFT.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/DFT.cpp.i
-.PHONY : DFT.cpp.i
+FFT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/FFT.cpp.i
+.PHONY : FFT.cpp.i
 
-DFT.s: DFT.cpp.s
-.PHONY : DFT.s
+FFT.s: FFT.cpp.s
+.PHONY : FFT.s
 
 # target to generate assembly for a file
-DFT.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/DFT.cpp.s
-.PHONY : DFT.cpp.s
+FFT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/FFT.cpp.s
+.PHONY : FFT.cpp.s
+
+MillerRabin.obj: MillerRabin.cpp.obj
+.PHONY : MillerRabin.obj
+
+# target to build an object file
+MillerRabin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj
+.PHONY : MillerRabin.cpp.obj
+
+MillerRabin.i: MillerRabin.cpp.i
+.PHONY : MillerRabin.i
+
+# target to preprocess a source file
+MillerRabin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.i
+.PHONY : MillerRabin.cpp.i
+
+MillerRabin.s: MillerRabin.cpp.s
+.PHONY : MillerRabin.s
+
+# target to generate assembly for a file
+MillerRabin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.s
+.PHONY : MillerRabin.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -185,9 +209,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Project_CLion
-	@echo ... DFT.obj
-	@echo ... DFT.i
-	@echo ... DFT.s
+	@echo ... FFT.obj
+	@echo ... FFT.i
+	@echo ... FFT.s
+	@echo ... MillerRabin.obj
+	@echo ... MillerRabin.i
+	@echo ... MillerRabin.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

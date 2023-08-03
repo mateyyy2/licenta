@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Project_CLion.dir/DFT.cpp.obj"
-  "CMakeFiles/Project_CLion.dir/DFT.cpp.obj.d"
+  "CMakeFiles/Project_CLion.dir/FFT.cpp.obj"
+  "CMakeFiles/Project_CLion.dir/FFT.cpp.obj.d"
+  "CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj"
+  "CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/main.cpp.obj"
   "CMakeFiles/Project_CLion.dir/main.cpp.obj.d"
   "Project_CLion.exe"

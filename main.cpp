@@ -11,6 +11,9 @@
 
 #include <omp.h>
 
+#include "MillerRabin.h"
+#include "FFT.h"
+
 using namespace std;
 
 typedef vector<vector<vector<int>>> matrix;
@@ -63,7 +66,7 @@ vector<complex<double>> DFT(vector<complex<double>> X) { // qubytes
 
 
 // new
-const double PI = acos(-1);
+//const double PI = acos(-1);
 
 vector<complex<double>> computeDFT(const vector<complex<double>>& input) {
     int N = input.size();
@@ -182,37 +185,37 @@ void CP_FFT(vector<complex<double>>& input) {
     }
 }
 
-void computeFFTRecursive(vector<complex<double>>& input, bool inverted) {
-    int N = input.size();
-    if(N <= 1) return;
-
-    // Divide
-    vector<complex<double>> even(N / 2), odd(N / 2);
-    for(int i = 0; i < N / 2; i++) {
-        even[i] = input[i * 2];
-        odd[i] = input[i * 2 + 1];
-    }
-
-    // Conquer
-    computeFFTRecursive(even, inverted);
-    computeFFTRecursive(odd, inverted);
-
-    // Combine
-    double angle = 2 * PI / N * (inverted ? -1 : 1);
-    complex<double> w(1), wn(cos(angle), sin(angle));
-
-    for(int k = 0; k < N / 2; k++) {
-        input[k] = even[k] + w * odd[k];
-        input[k + N / 2] = even[k] - w * odd[k];
-
-        if(inverted) {
-            input[k] /= 2;
-            input[k + N / 2] /= 2;
-        }
-
-        w *= wn;
-    }
-}
+//void computeFFTRecursive(vector<complex<double>>& input, bool inverted) {
+//    int N = input.size();
+//    if(N <= 1) return;
+//
+//    // Divide
+//    vector<complex<double>> even(N / 2), odd(N / 2);
+//    for(int i = 0; i < N / 2; i++) {
+//        even[i] = input[i * 2];
+//        odd[i] = input[i * 2 + 1];
+//    }
+//
+//    // Conquer
+//    computeFFTRecursive(even, inverted);
+//    computeFFTRecursive(odd, inverted);
+//
+//    // Combine
+//    double angle = 2 * PI / N * (inverted ? -1 : 1);
+//    complex<double> w(1), wn(cos(angle), sin(angle));
+//
+//    for(int k = 0; k < N / 2; k++) {
+//        input[k] = even[k] + w * odd[k];
+//        input[k + N / 2] = even[k] - w * odd[k];
+//
+//        if(inverted) {
+//            input[k] /= 2;
+//            input[k + N / 2] /= 2;
+//        }
+//
+//        w *= wn;
+//    }
+//}
 
 vector<int> multiplyPolynomialsFFT(vector<int> const& A, vector<int> const& B) {
     int N = 1;
@@ -527,6 +530,8 @@ int main() {
 
     cout << "\n\nthread count = " << thread::hardware_concurrency();
 
+
+    //testfunct();
 
     return 0;
 }

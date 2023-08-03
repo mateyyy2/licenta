@@ -82,35 +82,51 @@ CMakeFiles/Project_CLion.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\main.cpp" -o CMakeFiles\Project_CLion.dir\main.cpp.s
 
-CMakeFiles/Project_CLion.dir/DFT.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
-CMakeFiles/Project_CLion.dir/DFT.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/DFT.cpp
-CMakeFiles/Project_CLion.dir/DFT.cpp.obj: CMakeFiles/Project_CLion.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_CLion.dir/DFT.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_CLion.dir/DFT.cpp.obj -MF CMakeFiles\Project_CLion.dir\DFT.cpp.obj.d -o CMakeFiles\Project_CLion.dir\DFT.cpp.obj -c "D:\Facultate\Anul IV\Licenta\licenta\DFT.cpp"
+CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
+CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/MillerRabin.cpp
+CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj: CMakeFiles/Project_CLion.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj -MF CMakeFiles\Project_CLion.dir\MillerRabin.cpp.obj.d -o CMakeFiles\Project_CLion.dir\MillerRabin.cpp.obj -c "D:\Facultate\Anul IV\Licenta\licenta\MillerRabin.cpp"
 
-CMakeFiles/Project_CLion.dir/DFT.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_CLion.dir/DFT.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\Anul IV\Licenta\licenta\DFT.cpp" > CMakeFiles\Project_CLion.dir\DFT.cpp.i
+CMakeFiles/Project_CLion.dir/MillerRabin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_CLion.dir/MillerRabin.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\Anul IV\Licenta\licenta\MillerRabin.cpp" > CMakeFiles\Project_CLion.dir\MillerRabin.cpp.i
 
-CMakeFiles/Project_CLion.dir/DFT.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/DFT.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\DFT.cpp" -o CMakeFiles\Project_CLion.dir\DFT.cpp.s
+CMakeFiles/Project_CLion.dir/MillerRabin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/MillerRabin.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\MillerRabin.cpp" -o CMakeFiles\Project_CLion.dir\MillerRabin.cpp.s
+
+CMakeFiles/Project_CLion.dir/FFT.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
+CMakeFiles/Project_CLion.dir/FFT.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/FFT.cpp
+CMakeFiles/Project_CLion.dir/FFT.cpp.obj: CMakeFiles/Project_CLion.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project_CLion.dir/FFT.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_CLion.dir/FFT.cpp.obj -MF CMakeFiles\Project_CLion.dir\FFT.cpp.obj.d -o CMakeFiles\Project_CLion.dir\FFT.cpp.obj -c "D:\Facultate\Anul IV\Licenta\licenta\FFT.cpp"
+
+CMakeFiles/Project_CLion.dir/FFT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_CLion.dir/FFT.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\Anul IV\Licenta\licenta\FFT.cpp" > CMakeFiles\Project_CLion.dir\FFT.cpp.i
+
+CMakeFiles/Project_CLion.dir/FFT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/FFT.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\FFT.cpp" -o CMakeFiles\Project_CLion.dir\FFT.cpp.s
 
 # Object files for target Project_CLion
 Project_CLion_OBJECTS = \
 "CMakeFiles/Project_CLion.dir/main.cpp.obj" \
-"CMakeFiles/Project_CLion.dir/DFT.cpp.obj"
+"CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj" \
+"CMakeFiles/Project_CLion.dir/FFT.cpp.obj"
 
 # External object files for target Project_CLion
 Project_CLion_EXTERNAL_OBJECTS =
 
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/main.cpp.obj
-Project_CLion.exe: CMakeFiles/Project_CLion.dir/DFT.cpp.obj
+Project_CLion.exe: CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj
+Project_CLion.exe: CMakeFiles/Project_CLion.dir/FFT.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/build.make
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/linkLibs.rsp
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/objects1
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Project_CLion.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Project_CLion.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project_CLion.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

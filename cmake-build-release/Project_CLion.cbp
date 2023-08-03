@@ -82,10 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/DFT.cpp">
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/FFT.cpp">
 			<Option target="Project_CLion"/>
 		</Unit>
-		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/DFT.h">
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/FFT.h">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/MillerRabin.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/MillerRabin.h">
 			<Option target="Project_CLion"/>
 		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/main.cpp">

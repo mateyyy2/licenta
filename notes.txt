@@ -53,3 +53,12 @@ FFT
 OpenMP
 
 Split workload evenly between cores -> performance scales with more cores
+
+
+
+
+-----
+
+Comparam cu alte tooluri: prime95, aida64, linpack, etc
+
+de ce e mai bun? -> timp pana gaseste instabilitate (crash) -- PENTRU STRESS TEST
