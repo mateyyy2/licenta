@@ -94,7 +94,19 @@
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/MillerRabin.h">
 			<Option target="Project_CLion"/>
 		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/interface.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/interface.h">
+			<Option target="Project_CLion"/>
+		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/main.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/sysinfo.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/sysinfo.h">
 			<Option target="Project_CLion"/>
 		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/CMakeLists.txt">

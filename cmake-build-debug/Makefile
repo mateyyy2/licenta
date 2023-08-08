@@ -176,6 +176,30 @@ MillerRabin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.s
 .PHONY : MillerRabin.cpp.s
 
+interface.obj: interface.cpp.obj
+.PHONY : interface.obj
+
+# target to build an object file
+interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/interface.cpp.obj
+.PHONY : interface.cpp.obj
+
+interface.i: interface.cpp.i
+.PHONY : interface.i
+
+# target to preprocess a source file
+interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/interface.cpp.i
+.PHONY : interface.cpp.i
+
+interface.s: interface.cpp.s
+.PHONY : interface.s
+
+# target to generate assembly for a file
+interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/interface.cpp.s
+.PHONY : interface.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -200,6 +224,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sysinfo.obj: sysinfo.cpp.obj
+.PHONY : sysinfo.obj
+
+# target to build an object file
+sysinfo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj
+.PHONY : sysinfo.cpp.obj
+
+sysinfo.i: sysinfo.cpp.i
+.PHONY : sysinfo.i
+
+# target to preprocess a source file
+sysinfo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/sysinfo.cpp.i
+.PHONY : sysinfo.cpp.i
+
+sysinfo.s: sysinfo.cpp.s
+.PHONY : sysinfo.s
+
+# target to generate assembly for a file
+sysinfo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/sysinfo.cpp.s
+.PHONY : sysinfo.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -215,9 +263,15 @@ help:
 	@echo ... MillerRabin.obj
 	@echo ... MillerRabin.i
 	@echo ... MillerRabin.s
+	@echo ... interface.obj
+	@echo ... interface.i
+	@echo ... interface.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... sysinfo.obj
+	@echo ... sysinfo.i
+	@echo ... sysinfo.s
 .PHONY : help
 
 

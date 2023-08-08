@@ -2,6 +2,7 @@
 #include <cmath>
 #include <complex>
 #include <vector>
+#include <iomanip>
 
 #include <chrono>
 #include <thread>
@@ -13,6 +14,7 @@
 
 #include "MillerRabin.h"
 #include "FFT.h"
+#include "interface.h"
 
 using namespace std;
 
@@ -474,8 +476,8 @@ int main() {
 
 
 
-    chrono::time_point<chrono::high_resolution_clock> startPoint = chrono::high_resolution_clock::now();
-    auto start = chrono::time_point_cast<chrono::microseconds>(startPoint);
+//    chrono::time_point<chrono::high_resolution_clock> startPoint = chrono::high_resolution_clock::now();
+//    auto start = chrono::time_point_cast<chrono::microseconds>(startPoint);
     //auto end = chrono::
 
 //    for(unsigned int i = 0; i < numThreads; i++) {
@@ -500,38 +502,53 @@ int main() {
 //        workload();
 //    }
 
-    computeFFTRecursive(test, false);
-
-    cout << endl << "FFT Results: " << endl;
-    for(const auto& val : test) {
-        cout << val << endl;
-    }
-
-    computeFFTRecursive(test, true);
-    cout << endl << "Inverted FFT Results: " << endl;
-    for(const auto& val : test) {
-        cout << val << endl;
-    }
-
-    cout << "Running workload...\n";
-    workload();
-    cout << "Workload finished.\n";
-
-    chrono::time_point<chrono::high_resolution_clock> endPoint = chrono::high_resolution_clock::now();
-    auto end = chrono::time_point_cast<chrono::microseconds>(endPoint);
-
-    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
-    auto sec = duration * 0.001;
-
-    cout << endl;
-    cout << duration.count() * 0.001 << " ms" << endl;
-    cout << sec.count() * 0.001 << " s" << endl;
-
-
-    cout << "\n\nthread count = " << thread::hardware_concurrency();
+//    computeFFTRecursive(test, false);
+//
+//    cout << endl << "FFT Results: " << endl;
+//    for(const auto& val : test) {
+//        cout << val << endl;
+//    }
+//
+//    computeFFTRecursive(test, true);
+//    cout << endl << "Inverted FFT Results: " << endl;
+//    for(const auto& val : test) {
+//        cout << val << endl;
+//    }
+//
+//    cout << "Running workload...\n";
+//    workload();
+//    cout << "Workload finished.\n";
+//
+//    chrono::time_point<chrono::high_resolution_clock> endPoint = chrono::high_resolution_clock::now();
+//    auto end = chrono::time_point_cast<chrono::microseconds>(endPoint);
+//
+//    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
+//    auto sec = duration * 0.001;
+//
+//    cout << endl;
+//    cout << duration.count() * 0.001 << " ms" << endl;
+//    cout << sec.count() * 0.001 << " s" << endl;
+//
+//
+//    cout << "\n\nthread count = " << thread::hardware_concurrency();
 
 
     //testfunct();
+
+    int opt;
+    do {
+        mainMenu();
+        cin >> opt;
+
+        switch(opt) {
+            case 1: stressTestMenu(); break;
+            case 2: benchmarkMenu(); break;
+            case 3: sysInfoMenu(); break;
+            case 4: cout << "Exiting...\n"; break;
+            default: cout << "Invalid choice. Please try again.\n"; break;
+        }
+
+    } while (opt != 4);
 
     return 0;
 }
