@@ -1,0 +1,2 @@
+cmake-build-debug/* linguist-vendored
+cmake-build-release/* linguist-vendored

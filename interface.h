@@ -8,6 +8,7 @@
 #include <iomanip>
 #include <iostream>
 
+void clear();
 void mainMenu();
 void stressTestMenu();
 void benchmarkMenu();
