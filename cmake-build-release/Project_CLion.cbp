@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigFibonacci.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigFibonacci.h">
+			<Option target="Project_CLion"/>
+		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/FFT.cpp">
 			<Option target="Project_CLion"/>
 		</Unit>

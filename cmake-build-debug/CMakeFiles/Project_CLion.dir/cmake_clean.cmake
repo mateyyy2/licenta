@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj"
+  "CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/FFT.cpp.obj"
   "CMakeFiles/Project_CLion.dir/FFT.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj"

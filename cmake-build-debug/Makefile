@@ -128,6 +128,30 @@ Project_CLion/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/build
 .PHONY : Project_CLion/fast
 
+BigFibonacci.obj: BigFibonacci.cpp.obj
+.PHONY : BigFibonacci.obj
+
+# target to build an object file
+BigFibonacci.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj
+.PHONY : BigFibonacci.cpp.obj
+
+BigFibonacci.i: BigFibonacci.cpp.i
+.PHONY : BigFibonacci.i
+
+# target to preprocess a source file
+BigFibonacci.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.i
+.PHONY : BigFibonacci.cpp.i
+
+BigFibonacci.s: BigFibonacci.cpp.s
+.PHONY : BigFibonacci.s
+
+# target to generate assembly for a file
+BigFibonacci.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.s
+.PHONY : BigFibonacci.cpp.s
+
 FFT.obj: FFT.cpp.obj
 .PHONY : FFT.obj
 
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Project_CLion
+	@echo ... BigFibonacci.obj
+	@echo ... BigFibonacci.i
+	@echo ... BigFibonacci.s
 	@echo ... FFT.obj
 	@echo ... FFT.i
 	@echo ... FFT.s
