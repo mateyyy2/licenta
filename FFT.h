@@ -15,5 +15,8 @@ using namespace std;
 const double PI = acos(-1);
 
 void computeFFTRecursive(vector<complex<double>>& input, bool inverted);
+vector<int> multiplyPolynomialsFFT(vector<int> const& A, vector<int> const& B);
+
+
 
 #endif //PROJECT_CLION_FFT_H

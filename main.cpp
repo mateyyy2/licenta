@@ -12,9 +12,11 @@
 
 #include <omp.h>
 
+#include "interface.h"
+#include "BigFibonacci.h"
 #include "MillerRabin.h"
 #include "FFT.h"
-#include "interface.h"
+
 
 using namespace std;
 
@@ -219,37 +221,37 @@ void CP_FFT(vector<complex<double>>& input) {
 //    }
 //}
 
-vector<int> multiplyPolynomialsFFT(vector<int> const& A, vector<int> const& B) {
-    int N = 1;
-    // cea mai mica putere a lui 2 > (A.size + B.size - 1)
-    while(N < (A.size() + B.size()))
-        N <<= 1;
-
-    vector<complex<double>> FA(A.begin(), A.end());
-    vector<complex<double>> FB(B.begin(), B.end());
-    //A.resize(N);
-    FA.resize(N);
-    FB.resize(N);
-
-    // evaluam polinoamele
-    computeFFTRecursive(FA, false);
-    computeFFTRecursive(FB, false);
-
-    // multiplicam polinoamele
-    for(int i = 0; i < N; i++)
-        FA[i] *= FB[i];
-
-    // aplicam inverse FFT pentru a afla coeficientii
-    //                              converti produsul pointwise in coeficienti
-    computeFFTRecursive(FA, true);
-
-    // rotunjim coeficientii la int (erori pt complex)
-    vector<int> result(N);
-    for(int i = 0; i < N; i++)
-        result[i] = round(FA[i].real());
-
-    return result;
-}
+//vector<int> multiplyPolynomialsFFT(vector<int> const& A, vector<int> const& B) {
+//    int N = 1;
+//    // cea mai mica putere a lui 2 > (A.size + B.size - 1)
+//    while(N < (A.size() + B.size()))
+//        N <<= 1;
+//
+//    vector<complex<double>> FA(A.begin(), A.end());
+//    vector<complex<double>> FB(B.begin(), B.end());
+//    //A.resize(N);
+//    FA.resize(N);
+//    FB.resize(N);
+//
+//    // evaluam polinoamele
+//    computeFFTRecursive(FA, false);
+//    computeFFTRecursive(FB, false);
+//
+//    // multiplicam polinoamele
+//    for(int i = 0; i < N; i++)
+//        FA[i] *= FB[i];
+//
+//    // aplicam inverse FFT pentru a afla coeficientii
+//    //                              converti produsul pointwise in coeficienti
+//    computeFFTRecursive(FA, true);
+//
+//    // rotunjim coeficientii la int (erori pt complex)
+//    vector<int> result(N);
+//    for(int i = 0; i < N; i++)
+//        result[i] = round(FA[i].real());
+//
+//    return result;
+//}
 
 //vector<long long> multiplyLargeNumbersFFT(const vector<long long>& a, const vector<long long>& b) {
 //
