@@ -4,9 +4,12 @@
 
 #include "interface.h"
 #include "sysinfo.h"
+#include "BigFibonacci.h"
 
 #include <iomanip>
 #include <iostream>
+
+using namespace std;
 
 void clear() {
 #ifdef _WIN32
@@ -17,6 +20,8 @@ void clear() {
 }
 
 void mainMenu() {
+    //clear();
+
     std::cout << std::setw(5) << std::left << "1." << std::right << "Stress Test\n";
     std::cout << std::setw(5) << std::left << "2." << std::right << "Benchmark\n";
     std::cout << std::setw(5) << std::left << "3." << std::right << "SysInfo\n";
@@ -25,7 +30,15 @@ void mainMenu() {
 }
 
 void stressTestMenu() {
+//    Fibonacci fib(1000);
+//    for (int i = 0; i < 1000; i++) {
+//        fib.show_number(i);
+//    }
+    clear();
 
+    //cout << setw(5) << std::left << "1." << std::right << setw(10) << "Stress Test";
+
+    stressTest();
 }
 
 void benchmarkMenu() {
@@ -33,13 +46,20 @@ void benchmarkMenu() {
 }
 
 void sysInfoMenu() {
+    clear();
+
     CPUInfo cinfo;
 
-    clear();
     cout << std::setw(5) << std::left << "CPU Vendor = " << std::right << cinfo.vendor() << endl;
     cout << std::setw(5) << std::left << "CPU Model = " << std::right << cinfo.model() << endl;
     cout << std::setw(5) << std::left << "CPU Core Count = " << std::right << cinfo.cores() << endl;
     cout << std::setw(5) << std::left << "CPU Thread Count = " << std::right << cinfo.logicalCpus() << endl;
     cout << std::setw(5) << std::left << "CPU Hyper Threaded = " << std::right << cinfo.isHyperThreaded() << endl;
+
+//    cout << std::setw(15) << std::left << "CPU Vendor " << std::setw(15) << std::left << "=" << std::right << cinfo.vendor() << endl;
+//    cout << std::setw(15) << std::left << "CPU Model " << std::setw(15) << std::left << "=" <<  std::right << cinfo.model() << endl;
+//    cout << std::setw(15) << std::left << "CPU Core Count " << std::setw(15) << std::left << "=" << std::setw(15) << std::right << cinfo.cores() << endl;
+//    cout << std::setw(15) << std::left << "CPU Thread Count " << std::setw(15) << std::left << "="  << std::right << cinfo.logicalCpus() << endl;
+//    cout << std::setw(15) << std::left << "CPU Hyper Threaded " << "=" << std::setw(15) << std::right << cinfo.isHyperThreaded() << endl;
     cout << endl;
 }

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj"
   "CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj.d"
+  "CMakeFiles/Project_CLion.dir/BigInt.cpp.obj"
+  "CMakeFiles/Project_CLion.dir/BigInt.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/FFT.cpp.obj"
   "CMakeFiles/Project_CLion.dir/FFT.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project_CLion.dir/interface.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/main.cpp.obj"
   "CMakeFiles/Project_CLion.dir/main.cpp.obj.d"
+  "CMakeFiles/Project_CLion.dir/stressTest.cpp.obj"
+  "CMakeFiles/Project_CLion.dir/stressTest.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj"
   "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj.d"
   "Project_CLion.exe"

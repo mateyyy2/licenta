@@ -152,6 +152,34 @@ CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\BigFibonacci.cpp" -o CMakeFiles\Project_CLion.dir\BigFibonacci.cpp.s
 
+CMakeFiles/Project_CLion.dir/stressTest.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
+CMakeFiles/Project_CLion.dir/stressTest.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/stressTest.cpp
+CMakeFiles/Project_CLion.dir/stressTest.cpp.obj: CMakeFiles/Project_CLion.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project_CLion.dir/stressTest.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_CLion.dir/stressTest.cpp.obj -MF CMakeFiles\Project_CLion.dir\stressTest.cpp.obj.d -o CMakeFiles\Project_CLion.dir\stressTest.cpp.obj -c "D:\Facultate\Anul IV\Licenta\licenta\stressTest.cpp"
+
+CMakeFiles/Project_CLion.dir/stressTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_CLion.dir/stressTest.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\Anul IV\Licenta\licenta\stressTest.cpp" > CMakeFiles\Project_CLion.dir\stressTest.cpp.i
+
+CMakeFiles/Project_CLion.dir/stressTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/stressTest.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\stressTest.cpp" -o CMakeFiles\Project_CLion.dir\stressTest.cpp.s
+
+CMakeFiles/Project_CLion.dir/BigInt.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
+CMakeFiles/Project_CLion.dir/BigInt.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/BigInt.cpp
+CMakeFiles/Project_CLion.dir/BigInt.cpp.obj: CMakeFiles/Project_CLion.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project_CLion.dir/BigInt.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_CLion.dir/BigInt.cpp.obj -MF CMakeFiles\Project_CLion.dir\BigInt.cpp.obj.d -o CMakeFiles\Project_CLion.dir\BigInt.cpp.obj -c "D:\Facultate\Anul IV\Licenta\licenta\BigInt.cpp"
+
+CMakeFiles/Project_CLion.dir/BigInt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_CLion.dir/BigInt.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\Anul IV\Licenta\licenta\BigInt.cpp" > CMakeFiles\Project_CLion.dir\BigInt.cpp.i
+
+CMakeFiles/Project_CLion.dir/BigInt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/BigInt.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\BigInt.cpp" -o CMakeFiles\Project_CLion.dir\BigInt.cpp.s
+
 # Object files for target Project_CLion
 Project_CLion_OBJECTS = \
 "CMakeFiles/Project_CLion.dir/main.cpp.obj" \
@@ -159,7 +187,9 @@ Project_CLion_OBJECTS = \
 "CMakeFiles/Project_CLion.dir/FFT.cpp.obj" \
 "CMakeFiles/Project_CLion.dir/interface.cpp.obj" \
 "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj" \
-"CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj"
+"CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj" \
+"CMakeFiles/Project_CLion.dir/stressTest.cpp.obj" \
+"CMakeFiles/Project_CLion.dir/BigInt.cpp.obj"
 
 # External object files for target Project_CLion
 Project_CLion_EXTERNAL_OBJECTS =
@@ -170,11 +200,13 @@ Project_CLion.exe: CMakeFiles/Project_CLion.dir/FFT.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/interface.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj
+Project_CLion.exe: CMakeFiles/Project_CLion.dir/stressTest.cpp.obj
+Project_CLion.exe: CMakeFiles/Project_CLion.dir/BigInt.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/build.make
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/linkLibs.rsp
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/objects1
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Project_CLion.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Project_CLion.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project_CLion.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

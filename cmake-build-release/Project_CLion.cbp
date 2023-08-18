@@ -88,6 +88,12 @@
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigFibonacci.h">
 			<Option target="Project_CLion"/>
 		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigInt.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigInt.h">
+			<Option target="Project_CLion"/>
+		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/FFT.cpp">
 			<Option target="Project_CLion"/>
 		</Unit>
@@ -107,6 +113,12 @@
 			<Option target="Project_CLion"/>
 		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/main.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/stressTest.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/stressTest.h">
 			<Option target="Project_CLion"/>
 		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/sysinfo.cpp">

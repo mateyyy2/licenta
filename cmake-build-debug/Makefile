@@ -152,6 +152,30 @@ BigFibonacci.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.s
 .PHONY : BigFibonacci.cpp.s
 
+BigInt.obj: BigInt.cpp.obj
+.PHONY : BigInt.obj
+
+# target to build an object file
+BigInt.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigInt.cpp.obj
+.PHONY : BigInt.cpp.obj
+
+BigInt.i: BigInt.cpp.i
+.PHONY : BigInt.i
+
+# target to preprocess a source file
+BigInt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigInt.cpp.i
+.PHONY : BigInt.cpp.i
+
+BigInt.s: BigInt.cpp.s
+.PHONY : BigInt.s
+
+# target to generate assembly for a file
+BigInt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigInt.cpp.s
+.PHONY : BigInt.cpp.s
+
 FFT.obj: FFT.cpp.obj
 .PHONY : FFT.obj
 
@@ -248,6 +272,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+stressTest.obj: stressTest.cpp.obj
+.PHONY : stressTest.obj
+
+# target to build an object file
+stressTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/stressTest.cpp.obj
+.PHONY : stressTest.cpp.obj
+
+stressTest.i: stressTest.cpp.i
+.PHONY : stressTest.i
+
+# target to preprocess a source file
+stressTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/stressTest.cpp.i
+.PHONY : stressTest.cpp.i
+
+stressTest.s: stressTest.cpp.s
+.PHONY : stressTest.s
+
+# target to generate assembly for a file
+stressTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/stressTest.cpp.s
+.PHONY : stressTest.cpp.s
+
 sysinfo.obj: sysinfo.cpp.obj
 .PHONY : sysinfo.obj
 
@@ -284,6 +332,9 @@ help:
 	@echo ... BigFibonacci.obj
 	@echo ... BigFibonacci.i
 	@echo ... BigFibonacci.s
+	@echo ... BigInt.obj
+	@echo ... BigInt.i
+	@echo ... BigInt.s
 	@echo ... FFT.obj
 	@echo ... FFT.i
 	@echo ... FFT.s
@@ -296,6 +347,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... stressTest.obj
+	@echo ... stressTest.i
+	@echo ... stressTest.s
 	@echo ... sysinfo.obj
 	@echo ... sysinfo.i
 	@echo ... sysinfo.s

@@ -12,29 +12,40 @@ using namespace std;
 //
 //};
 
-BigInt::BigInt(unsigned long unit_i) {
-    assert(unit_i < BASE2);
-    units_.push_back(unit_i);
+
+
+BigInt Fibonacci::get_number(unsigned int n_i) {
+    fibs_.reserve(n_i + 1);
+    const unsigned int cur_size = fibs_.size();
+
+    for(unsigned int i = cur_size; i <= n_i; i++) {
+        switch(i) {
+            case 0:
+                fibs_.push_back(BigInt(0));
+                break;
+            case 1:
+                if(fibs_.empty()) fibs_.push_back(BigInt(0));
+                fibs_.push_back(BigInt(1));
+                break;
+            default:
+                fibs_.push_back(BigInt(get_number(i - 2), get_number(i - 1)));
+                break;
+        }
+    }
+
+    assert(n_i < fibs_.size());
+
+    return fibs_[n_i];
 }
 
-BigInt::BigInt(BigInt big1_i, BigInt big2_i) {
-    const unsigned long max_size = MAX(big1_i.units_.size(), big2_i.units_.size());
+void Fibonacci::show_number(unsigned long n_i) {
+    ostringstream oss;
 
-    big1_i.units_.resize(max_size);
-    big2_i.units_.resize(max_size);
-    units_.resize(max_size);
+    if(!(n_i < fibs_.size())) get_number(n_i);
 
-    head_s = 0;
-    transform(big1_i.units_.begin(), big1_i.units_.end(), big2_i.units_.begin(), units_.begin(), *this);
+    oss << "Fib [" << n_i << "] = " << fibs_[n_i] << endl;
 
-    if(head_s) units_.push_back(head_s);
-}
-
-unsigned long BigInt::operator()(const unsigned long n1, const unsigned long n2) {
-    const unsigned long value = n1 + n2 + head_s;
-    head_s = value / BASE2;
-
-    return (value % BASE2);
+    //cout << oss.str();
 }
 
 inline ostream& operator<< (ostream& os, const BigInt& ins_i) {
@@ -46,3 +57,5 @@ inline ostream& operator<< (ostream& os, const BigInt& ins_i) {
 
     return os << ins_i.units_[0];
 }
+
+//unsigned long BigInt::head_s (0);

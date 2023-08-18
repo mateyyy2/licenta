@@ -8,6 +8,8 @@
 #include <iomanip>
 #include <iostream>
 
+#include "stressTest.h"
+
 void clear();
 void mainMenu();
 void stressTestMenu();
