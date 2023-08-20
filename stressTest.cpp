@@ -11,7 +11,7 @@ atomic<bool> continueStressTest(true);
 void fibonacciStartEnd(Fibonacci& fib, int start, int end) {
     while(continueStressTest) {
         for (int i = start; i < end; i++) {
-            fib.show_number(i);
+            fib.showNumber(i);
         }
     }
 }
@@ -24,7 +24,8 @@ void runFibonacci() {
         //Fibonacci fib(10000);
         Fibonacci fib(2);
         for(int i = 0; i <= 25000; i++) {
-            fib.show_number(i);
+            fib.showNumber(i);
+            //fib.get_number(i);
             if(i == 25000) {
                 cout << "Worker has reached 25000th Fibonacci number.\n";
             }

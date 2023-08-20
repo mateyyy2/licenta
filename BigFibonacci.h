@@ -20,20 +20,22 @@
 #define BASE1 10
 #define BASE2 1000000000
 
-using namespace std;
+//using namespace std;
 
-inline ostream& operator<< (ostream& os, const BigInt& ins_i);
+inline std::ostream& operator<< (std::ostream& os, const BigInt& big);
 
 class Fibonacci {
 private:
-    vector<BigInt> fibs_;
-    BigInt get_number(unsigned int n_i = 0);
+    std::vector<BigInt> fibs;
 
 public:
-    void show_number(unsigned long n_i);
+    BigInt getNumber(unsigned int n = 0);
+    void showNumber(unsigned long n);
 
-    Fibonacci(unsigned int n_i = 0) { get_number(n_i); }
-    ~Fibonacci() {}
+    Fibonacci(unsigned int n = 0);
+    ~Fibonacci();
+    //Fibonacci(unsigned int n = 0) { get_number(n); }
+    //~Fibonacci() {}
 };
 
 #endif //PROJECT_CLION_BIGFIBONACCI_H

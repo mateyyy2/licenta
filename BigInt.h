@@ -17,18 +17,19 @@
 #define BASE1 10
 #define BASE2 1000000000
 
-using namespace std;
+//using namespace std;
 
 class BigInt {
-    friend ostream& operator<< (ostream& os, const BigInt& ins_i);
+    friend std::ostream& operator<< (std::ostream& os, const BigInt& big);
 
 private:
-    static unsigned long head_s;
-    vector<unsigned long> units_;
+    static unsigned long carry;
+    std::vector<unsigned long> units;
 
 public:
-    BigInt(unsigned long unit_i);
-    BigInt(BigInt big1_i, BigInt big2_i);
+    BigInt(unsigned long unit);
+    BigInt(BigInt big1, BigInt big2);
+
     unsigned long operator() (const unsigned long n1, const unsigned long n2);
 
 };
