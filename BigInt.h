@@ -11,30 +11,71 @@
 #include <cassert>
 #include <iomanip>
 
-#define MAX(x,y) ((x) > (y) ? (x) : (y))
-
-#define MAX_UNIT_VALUE (ULONG_MAX >> 2)
-#define BASE1 10
-#define BASE2 1000000000
+//#define MAX(x,y) ((x) > (y) ? (x) : (y))
+//
+//#define MAX_UNIT_VALUE (ULONG_MAX >> 2)
+//#define BASE1 10
+//#define BASE2 1000000000
 
 //using namespace std;
 
-class BigInt {
-    friend std::ostream& operator<< (std::ostream& os, const BigInt& big);
+//class BigInt {
+//    friend std::ostream& operator<< (std::ostream& os, const BigInt& big);
+//
+//private:
+//    static unsigned long carry;
+//    std::vector<unsigned long> digits;
+//
+//public:
+//    BigInt(unsigned long digit);
+//    BigInt(BigInt big1, BigInt big2);
+//
+//    unsigned long operator() (const unsigned long n1, const unsigned long n2);
+//    unsigned long getDigit(int index);
+//
+//};
 
+//inline ostream& operator<< (ostream& os, const BigInt& ins_i);
+
+
+
+class BigInt {
 private:
-    static unsigned long carry;
-    std::vector<unsigned long> units;
+    int* carry;
+    int* digits;
+    int size;
+    bool isNegative;
 
 public:
-    BigInt(unsigned long unit);
-    BigInt(BigInt big1, BigInt big2);
+    BigInt();                       // null
+    BigInt(const BigInt& big);      // copy
+    BigInt(int size);               // init size
+    BigInt(long value, int size);   // init value + size
+    ~BigInt();
 
-    unsigned long operator() (const unsigned long n1, const unsigned long n2);
+    int getSize() const;
+    int getDigit(int index) const;
+    int* getDigitsCopy() const;
+    int* getCarryCopy() const;
+    bool isNegativeNumber() const;
+
+    void print() const;
+    void printCarry() const;
+
+    int getMostSignificantDigit() const;
+    void setDigits(int* digits);
+    bool setDigit(int value, int index);
+    bool hasCarry();
+
+    //void rightShift();
+    BigInt & operator+=(const BigInt& x);
+
 
 };
 
-//inline ostream& operator<< (ostream& os, const BigInt& ins_i);
+inline BigInt operator+(BigInt lhs, const BigInt &x);
+
+
 
 
 

@@ -11,7 +11,8 @@ atomic<bool> continueStressTest(true);
 void fibonacciStartEnd(Fibonacci& fib, int start, int end) {
     while(continueStressTest) {
         for (int i = start; i < end; i++) {
-            fib.showNumber(i);
+            fib.showFib(i);
+            //fib.showNumber(i);
         }
     }
 }
@@ -23,11 +24,14 @@ void runFibonacci() {
 //    while(chrono::duration_cast<chrono::minutes>(end - start).count() < 1) {
         //Fibonacci fib(10000);
         Fibonacci fib(2);
-        for(int i = 0; i <= 25000; i++) {
-            fib.showNumber(i);
-            //fib.get_number(i);
+        for(int i = 0; i <= 5000; i++) {
+            //fib.showNumber(i);
+            //fib.getNumber(i);
+            //fib.getFib(i);
+            fib.getFib(i);
             if(i == 25000) {
                 cout << "Worker has reached 25000th Fibonacci number.\n";
+                //cout << endl << fib.getNumber(i).getDigit(0);
             }
         }
 
@@ -56,7 +60,6 @@ void stressTest() {
         //threads.push_back(thread(fibonacciStartEnd, ref(fib), start, end));
         threads.push_back(thread(runFibonacci));
     }
-
 //    this_thread::sleep_for(chrono::seconds(15));
 //    continueStressTest = false;
 

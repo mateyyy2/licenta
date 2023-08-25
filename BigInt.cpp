@@ -5,30 +5,30 @@
 #include "BigInt.h"
 
 
-BigInt::BigInt(unsigned long unit) {
-    assert(unit < BASE2);
-    units.push_back(unit);
-}
-
-BigInt::BigInt(BigInt big1, BigInt big2) {
-    const unsigned long max_size = MAX(big1.units.size(), big2.units.size());
-
-    big1.units.resize(max_size);
-    big2.units.resize(max_size);
-    units.resize(max_size);
-
-    carry = 0;
-    transform(big1.units.begin(), big1.units.end(), big2.units.begin(), units.begin(), *this);
-
-    if(carry) units.push_back(carry);
-}
-
-unsigned long BigInt::operator()(const unsigned long n1, const unsigned long n2) {
-    const unsigned long value = n1 + n2 + carry;
-    carry = value / BASE2;
-
-    return (value % BASE2);
-}
+//BigInt::BigInt(unsigned long unit) {
+//    assert(unit < BASE2);
+//    digits.push_back(unit);
+//}
+//
+//BigInt::BigInt(BigInt big1, BigInt big2) {
+//    const unsigned long max_size = MAX(big1.digits.size(), big2.digits.size());
+//
+//    big1.digits.resize(max_size);
+//    big2.digits.resize(max_size);
+//    digits.resize(max_size);
+//
+//    carry = 0;
+//    transform(big1.digits.begin(), big1.digits.end(), big2.digits.begin(), digits.begin(), *this);
+//
+//    if(carry) digits.push_back(carry);
+//}
+//
+//unsigned long BigInt::operator()(const unsigned long n1, const unsigned long n2) {
+//    const unsigned long value = n1 + n2 + carry;
+//    carry = value / BASE2;
+//
+//    return (value % BASE2);
+//}
 
 //inline ostream& operator<< (ostream& os, const BigInt& ins_i) {
 //    assert(!ins_i.units_.empty());
@@ -40,4 +40,172 @@ unsigned long BigInt::operator()(const unsigned long n1, const unsigned long n2)
 //    return os << ins_i.units_[0];
 //}
 
-unsigned long BigInt::carry (0);
+//unsigned long BigInt::getDigit(int index) {
+//    return this->digits[index];
+//}
+//
+//unsigned long BigInt::carry (0);
+
+
+
+
+
+
+BigInt::BigInt() {
+    this->carry = NULL;
+    this->digits = NULL;
+    this->size = 0;
+    this->isNegative = false;
+}
+
+BigInt::BigInt(const BigInt& big) {
+    this->digits = new int[big.getSize()];
+    this->size = big.getSize();
+    this->isNegative = big.isNegativeNumber();
+    this->digits = big.getDigitsCopy();
+    this->carry = big.getCarryCopy();
+}
+
+BigInt::BigInt(int size) {
+    this->carry = NULL;
+    this->digits = new int[size];
+    for(int i = 0; i < size; i++) { this->digits[i] = 0; }
+    this->size = size;
+    this->isNegative = false;
+}
+
+BigInt::BigInt(long value, int size) {
+    int i;
+
+    this->carry = NULL;
+    this->digits = new int[size];
+    this->size = size;
+    for(i = 0; i < size; i++) {
+        this->digits[i] = value % 10;
+        value /= 10;
+    }
+    this->isNegative = false;
+}
+
+BigInt::~BigInt() {
+    delete[] this->digits;
+    if(this->carry != NULL) { delete[] this->carry; }
+}
+
+int BigInt::getSize() const {
+    return this->size;
+}
+
+int BigInt::getDigit(int index) const {
+    return this->digits[index];
+}
+
+int* BigInt::getDigitsCopy() const {
+    int* digitsCopy = new int[this->size];
+
+    for(int i = 0; i < this->size; i++) {
+        digitsCopy[i] = this->digits[i];
+    }
+
+    return digitsCopy;
+}
+
+int* BigInt::getCarryCopy() const {
+    if(this->carry != NULL) {
+        int* carryCopy = new int[this->size];
+
+        for(int i = 0; i < this->size; i++) {
+            carryCopy[i] = this->carry[i];
+        }
+
+        return carryCopy;
+    }
+
+    return NULL;
+}
+
+bool BigInt::isNegativeNumber() const {
+    return this->isNegative;
+}
+
+void BigInt::print() const {
+    for(int i = this->size - 1; i >= 0; i--) { std::cout << this->digits[i]; }
+    std::cout << std::endl;
+}
+
+void BigInt::printCarry() const {
+    if(this->carry != NULL) {
+        for (int i = this->size - 1; i >= 0; i--) { std::cout << this->carry[i]; }
+        std::cout << std::endl;
+    }
+    else { std::cout << "0\n"; }
+}
+
+int BigInt::getMostSignificantDigit() const {
+    for(int i = this->size - 1; i >= 0; i--) {
+        if(digits[i] > 0) { return i; }
+    }
+
+    return 0;
+}
+
+void BigInt::setDigits(int* digits) {
+    delete[] this->digits;
+    this->digits = digits;
+    this->size = sizeof(digits) / sizeof(int);
+}
+
+bool BigInt::setDigit(int value, int index) {
+    int sig = this->getMostSignificantDigit();
+
+    if(value < 10 && value >= 0 && index >= 0 && index <= sig) {
+        this->digits[index] = value;
+        return true;
+    }
+
+    return false;
+}
+
+bool BigInt::hasCarry() {
+    if(this->carry != NULL) {
+        for(int i = 0; i < this->size; i++) {
+            if(this->carry[i] > 0) return true;
+        }
+    }
+
+    return false;
+}
+
+BigInt &BigInt::operator+=(const BigInt &x) {
+    int i, newValue, carry = 0;
+
+//    if(this->size != x.getSize()) {
+//        std::cout << "Mismatched BigInt sizes in += operator.\n";
+//        return *(new BigInt(0, 1));
+//    }
+
+    for(i = 0; i < this->size; i++) {
+        newValue = this->digits[i] + x.getDigit(i) + carry;
+
+        this->digits[i] = newValue % 10;
+        if(newValue >= 10)
+            carry = newValue / 10;
+        else
+            carry = 0;
+    }
+
+//    if(carry > 0) {
+//        std::cout << "Overflow in += operator.\n";
+//    }
+
+    return *this;
+}
+
+
+
+
+
+inline BigInt operator+(BigInt lhs, const BigInt &x) {
+    lhs += x;
+    return lhs;
+}

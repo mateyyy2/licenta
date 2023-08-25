@@ -42,7 +42,14 @@ void stressTestMenu() {
 }
 
 void benchmarkMenu() {
+    //clear();
 
+    Fibonacci fn(1);
+    //fn.showFib(1);
+
+
+//    BigInt fn(3254346, 1000);
+//    fn.print();
 }
 
 void sysInfoMenu() {

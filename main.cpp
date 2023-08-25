@@ -542,6 +542,9 @@ int main() {
         mainMenu();
         cin >> opt;
 
+        BigInt x(1325, 100);
+        x.print();
+
         switch(opt) {
             case 1: stressTestMenu(); break;
             case 2: benchmarkMenu(); break;
