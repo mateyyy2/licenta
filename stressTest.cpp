@@ -24,7 +24,7 @@ void runFibonacci() {
 //    while(chrono::duration_cast<chrono::minutes>(end - start).count() < 1) {
         //Fibonacci fib(10000);
         Fibonacci fib(2);
-        for(int i = 0; i <= 5000; i++) {
+        for(int i = 0; i <= 25000; i++) {
             //fib.showNumber(i);
             //fib.getNumber(i);
             //fib.getFib(i);

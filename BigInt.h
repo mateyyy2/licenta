@@ -68,14 +68,32 @@ public:
     bool hasCarry();
 
     //void rightShift();
+    BigInt & operator=(const BigInt& rhs);
     BigInt & operator+=(const BigInt& x);
+    BigInt & operator-=(const BigInt& x);
+    BigInt & operator*=(const int& x);
 
 
 };
 
-inline BigInt operator+(BigInt lhs, const BigInt &x);
+//inline BigInt operator+(BigInt lhs, const BigInt& x);
+//inline BigInt operator-(BigInt lhs, const BigInt& x);
+//inline BigInt operator*(BigInt lhs, const int& x);
 
+inline BigInt operator+(BigInt lhs, const BigInt &x) {
+    lhs += x;
+    return lhs;
+}
 
+inline BigInt operator-(BigInt lhs, const BigInt &x) {
+    lhs -= x;
+    return lhs;
+}
+
+inline BigInt operator*(BigInt lhs, const int &x) {
+    lhs *= x;
+    return lhs;
+}
 
 
 

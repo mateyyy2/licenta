@@ -542,8 +542,28 @@ int main() {
         mainMenu();
         cin >> opt;
 
-        BigInt x(1325, 100);
-        x.print();
+//        BigInt x(1325, 100);
+//        x.print();
+
+//        BigInt fn(1, 1000);
+//        BigInt fn_minus_1(1, 1000);
+//
+//        long count = 3;
+//
+//        while (1)
+//        {
+//            fn = fn - fn_minus_1;
+//            fn_minus_1 = fn + fn_minus_1;
+//            fn = fn_minus_1 * 2 - fn;
+//
+//            if (fn.getDigit(999) > 0)
+//                break;
+//
+//            count++;
+//        }
+//
+//        fn.print();
+//        cout << "The " << count << " term of the fibonacci sequence is the first to contain at least 100 digits." << endl;
 
         switch(opt) {
             case 1: stressTestMenu(); break;
