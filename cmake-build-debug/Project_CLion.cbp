@@ -82,12 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigFibonacci.cpp">
-			<Option target="Project_CLion"/>
-		</Unit>
-		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigFibonacci.h">
-			<Option target="Project_CLion"/>
-		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/BigInt.cpp">
 			<Option target="Project_CLion"/>
 		</Unit>
@@ -98,6 +92,12 @@
 			<Option target="Project_CLion"/>
 		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/FFT.h">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/Fibonacci.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/Fibonacci.h">
 			<Option target="Project_CLion"/>
 		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/MillerRabin.cpp">

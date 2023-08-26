@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj"
-  "CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/BigInt.cpp.obj"
   "CMakeFiles/Project_CLion.dir/BigInt.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/FFT.cpp.obj"
   "CMakeFiles/Project_CLion.dir/FFT.cpp.obj.d"
+  "CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj"
+  "CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj"
   "CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/interface.cpp.obj"

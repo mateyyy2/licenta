@@ -138,19 +138,19 @@ CMakeFiles/Project_CLion.dir/sysinfo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/sysinfo.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\sysinfo.cpp" -o CMakeFiles\Project_CLion.dir\sysinfo.cpp.s
 
-CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
-CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/BigFibonacci.cpp
-CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj: CMakeFiles/Project_CLion.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj -MF CMakeFiles\Project_CLion.dir\BigFibonacci.cpp.obj.d -o CMakeFiles\Project_CLion.dir\BigFibonacci.cpp.obj -c "D:\Facultate\Anul IV\Licenta\licenta\BigFibonacci.cpp"
+CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
+CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/Fibonacci.cpp
+CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj: CMakeFiles/Project_CLion.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Facultate\Anul IV\Licenta\licenta\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj -MF CMakeFiles\Project_CLion.dir\Fibonacci.cpp.obj.d -o CMakeFiles\Project_CLion.dir\Fibonacci.cpp.obj -c "D:\Facultate\Anul IV\Licenta\licenta\Fibonacci.cpp"
 
-CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\Anul IV\Licenta\licenta\BigFibonacci.cpp" > CMakeFiles\Project_CLion.dir\BigFibonacci.cpp.i
+CMakeFiles/Project_CLion.dir/Fibonacci.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_CLion.dir/Fibonacci.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\Anul IV\Licenta\licenta\Fibonacci.cpp" > CMakeFiles\Project_CLion.dir\Fibonacci.cpp.i
 
-CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\BigFibonacci.cpp" -o CMakeFiles\Project_CLion.dir\BigFibonacci.cpp.s
+CMakeFiles/Project_CLion.dir/Fibonacci.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_CLion.dir/Fibonacci.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\Anul IV\Licenta\licenta\Fibonacci.cpp" -o CMakeFiles\Project_CLion.dir\Fibonacci.cpp.s
 
 CMakeFiles/Project_CLion.dir/stressTest.cpp.obj: CMakeFiles/Project_CLion.dir/flags.make
 CMakeFiles/Project_CLion.dir/stressTest.cpp.obj: D:/Facultate/Anul\ IV/Licenta/licenta/stressTest.cpp
@@ -187,7 +187,7 @@ Project_CLion_OBJECTS = \
 "CMakeFiles/Project_CLion.dir/FFT.cpp.obj" \
 "CMakeFiles/Project_CLion.dir/interface.cpp.obj" \
 "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj" \
-"CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj" \
+"CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj" \
 "CMakeFiles/Project_CLion.dir/stressTest.cpp.obj" \
 "CMakeFiles/Project_CLion.dir/BigInt.cpp.obj"
 
@@ -199,7 +199,7 @@ Project_CLion.exe: CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/FFT.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/interface.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj
-Project_CLion.exe: CMakeFiles/Project_CLion.dir/BigFibonacci.cpp.obj
+Project_CLion.exe: CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/stressTest.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/BigInt.cpp.obj
 Project_CLion.exe: CMakeFiles/Project_CLion.dir/build.make

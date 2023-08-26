@@ -1,6 +1,5 @@
-CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj: \
- D:\Facultate\Anul\ IV\Licenta\licenta\MillerRabin.cpp \
- D:\Facultate\Anul\ IV\Licenta\licenta\MillerRabin.h \
+CMakeFiles/Project_CLion.dir/Fibonacci.cpp.obj: \
+ D:\Facultate\Anul\ IV\Licenta\licenta\Fibonacci.cpp \
  D:\Facultate\Anul\ IV\Licenta\licenta\Fibonacci.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/string \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \

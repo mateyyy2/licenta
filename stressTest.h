@@ -10,7 +10,7 @@
 #include <atomic>
 #include <iostream>
 
-#include "BigFibonacci.h"
+#include "Fibonacci.h"
 #include "MillerRabin.h"
 #include "FFT.h"
 

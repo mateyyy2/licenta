@@ -24,13 +24,14 @@ void runFibonacci() {
 //    while(chrono::duration_cast<chrono::minutes>(end - start).count() < 1) {
         //Fibonacci fib(10000);
         Fibonacci fib(2);
-        for(int i = 0; i <= 25000; i++) {
+        for(int i = 0; i <= 4500; i++) {
             //fib.showNumber(i);
             //fib.getNumber(i);
             //fib.getFib(i);
             fib.getFib(i);
-            if(i == 25000) {
+            if(i == 4500) {
                 cout << "Worker has reached 25000th Fibonacci number.\n";
+                fib.showFib(i);
                 //cout << endl << fib.getNumber(i).getDigit(0);
             }
         }

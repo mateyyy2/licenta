@@ -5,7 +5,7 @@
 #ifndef PROJECT_CLION_MILLERRABIN_H
 #define PROJECT_CLION_MILLERRABIN_H
 
-#include "BigFibonacci.h"
+#include "Fibonacci.h"
 
 //BigInt modularPow(const BigInt& base, const BigInt& exp, const BigInt& mod) {
 //    BigInt result(1);

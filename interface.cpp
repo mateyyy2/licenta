@@ -4,7 +4,7 @@
 
 #include "interface.h"
 #include "sysinfo.h"
-#include "BigFibonacci.h"
+#include "Fibonacci.h"
 
 #include <iomanip>
 #include <iostream>
@@ -45,7 +45,10 @@ void benchmarkMenu() {
     //clear();
 
     Fibonacci fn(1);
-    fn.showFib(1);
+    for(int i = 0; i < 15; i++) {
+        cout << "Fib(" << i << ") = ";
+        fn.showFib(i);
+    }
 
 
 //    BigInt fn(3254346, 1000);

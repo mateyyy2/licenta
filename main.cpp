@@ -13,7 +13,7 @@
 #include <omp.h>
 
 #include "interface.h"
-#include "BigFibonacci.h"
+#include "Fibonacci.h"
 #include "MillerRabin.h"
 #include "FFT.h"
 
@@ -540,6 +540,8 @@ int main() {
     int opt;
     do {
         mainMenu();
+//        Fibonacci a;
+//        a.showFib(10);
         cin >> opt;
 
 //        BigInt x(1325, 100);

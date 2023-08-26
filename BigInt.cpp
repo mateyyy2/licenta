@@ -203,10 +203,10 @@ BigInt &BigInt::operator=(const BigInt &rhs) {
 BigInt &BigInt::operator+=(const BigInt &x) {
     int i, newValue, carry = 0;
 
-//    if(this->size != x.getSize()) {
-//        std::cout << "Mismatched BigInt sizes in += operator.\n";
-//        return *(new BigInt(0, 1));
-//    }
+    if(this->size != x.getSize()) {
+        std::cout << "Mismatched BigInt sizes in += operator.\n";
+        return *(new BigInt(0, 1));
+    }
 
     for(i = 0; i < this->size; i++) {
         newValue = this->digits[i] + x.getDigit(i) + carry;
