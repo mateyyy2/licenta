@@ -224,6 +224,30 @@ MillerRabin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.s
 .PHONY : MillerRabin.cpp.s
 
+benchmark.obj: benchmark.cpp.obj
+.PHONY : benchmark.obj
+
+# target to build an object file
+benchmark.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/benchmark.cpp.obj
+.PHONY : benchmark.cpp.obj
+
+benchmark.i: benchmark.cpp.i
+.PHONY : benchmark.i
+
+# target to preprocess a source file
+benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/benchmark.cpp.i
+.PHONY : benchmark.cpp.i
+
+benchmark.s: benchmark.cpp.s
+.PHONY : benchmark.s
+
+# target to generate assembly for a file
+benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/benchmark.cpp.s
+.PHONY : benchmark.cpp.s
+
 interface.obj: interface.cpp.obj
 .PHONY : interface.obj
 
@@ -341,6 +365,9 @@ help:
 	@echo ... MillerRabin.obj
 	@echo ... MillerRabin.i
 	@echo ... MillerRabin.s
+	@echo ... benchmark.obj
+	@echo ... benchmark.i
+	@echo ... benchmark.s
 	@echo ... interface.obj
 	@echo ... interface.i
 	@echo ... interface.s
