@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Project_CLion::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Project_CLion-Debug-cd5e25d43583a4dd339a.json",
+					"jsonFile" : "target-Project_CLion-Release-0a629d029677a7e612b8.json",
 					"name" : "Project_CLion",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Facultate/Anul IV/Licenta/licenta/cmake-build-debug",
+		"build" : "D:/Facultate/Anul IV/Licenta/licenta/cmake-build-release",
 		"source" : "D:/Facultate/Anul IV/Licenta/licenta"
 	},
 	"version" : 

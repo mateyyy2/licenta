@@ -344,6 +344,30 @@ sysinfo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/sysinfo.cpp.s
 .PHONY : sysinfo.cpp.s
 
+workloads.obj: workloads.cpp.obj
+.PHONY : workloads.obj
+
+# target to build an object file
+workloads.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/workloads.cpp.obj
+.PHONY : workloads.cpp.obj
+
+workloads.i: workloads.cpp.i
+.PHONY : workloads.i
+
+# target to preprocess a source file
+workloads.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/workloads.cpp.i
+.PHONY : workloads.cpp.i
+
+workloads.s: workloads.cpp.s
+.PHONY : workloads.s
+
+# target to generate assembly for a file
+workloads.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/workloads.cpp.s
+.PHONY : workloads.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -380,6 +404,9 @@ help:
 	@echo ... sysinfo.obj
 	@echo ... sysinfo.i
 	@echo ... sysinfo.s
+	@echo ... workloads.obj
+	@echo ... workloads.i
+	@echo ... workloads.s
 .PHONY : help
 
 

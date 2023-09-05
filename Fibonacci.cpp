@@ -6,63 +6,6 @@
 
 using namespace std;
 
-//class BigInt {
-//    friend ostream& operator<< (ostream& os, const BigInt& ins_i);
-//
-//
-//};
-
-//Fibonacci::Fibonacci(unsigned int n) { getNumber(n); }
-//Fibonacci::~Fibonacci() {}
-//
-//BigInt Fibonacci::getNumber(unsigned int n) {
-//    fibs.reserve(n + 1);
-//    const unsigned int cur_size = fibs.size();
-//
-//    for(unsigned int i = cur_size; i <= n; i++) {
-//        switch(i) {
-//            case 0:
-//                fibs.push_back(BigInt(0));
-//                break;
-//            case 1:
-//                if(fibs.empty()) fibs.push_back(BigInt(0));
-//                fibs.push_back(BigInt(1));
-//                break;
-//            default:
-//                fibs.push_back(BigInt(getNumber(i - 2), getNumber(i - 1)));
-//                break;
-//        }
-//    }
-//
-//    assert(n < fibs.size());
-//
-//    return fibs[n];
-//}
-//
-//void Fibonacci::showNumber(unsigned long n) {
-//    ostringstream oss;
-//
-//    if(!(n < fibs.size())) getNumber(n);
-//
-//    oss << "Fib [" << n << "] = " << fibs[n] << endl;
-//
-//    cout << oss.str();
-//}
-//
-//inline ostream& operator<< (ostream& os, const BigInt& big) {
-//    assert(!big.digits.empty());
-//
-//    for(unsigned long i = (big.digits.size() - 1); i; --i) {
-//        os << big.digits[i] << setw(BASE1 - 1) << setfill('0');
-//    }
-//
-//    return os << big.digits[0];
-//}
-
-//unsigned long BigInt::head_s (0);
-
-
-
 Fibonacci::Fibonacci(unsigned int n) { getFib(n); }
 Fibonacci::~Fibonacci() {}
 
@@ -99,18 +42,24 @@ Fibonacci::~Fibonacci() {}
 
 BigInt Fibonacci::getFib(unsigned int n) {
     fibs.reserve(n + 1);
+    //int theoreticalSize;
 
     for(unsigned int i = fibs.size(); i <= n; i++) {
+        //theoreticalSize = ceil(i * 0.209);
         switch(i) {
             case 0:
-                fibs.push_back(BigInt(0, 1000));
+                fibs.push_back(BigInt(0, 2090));
+                //fibs.push_back(BigInt(0, theoreticalSize));
                 break;
             case 1:
-                if(fibs.empty()) { fibs.push_back(BigInt(0, 1000)); }
-                fibs.push_back(BigInt(1, 1000));
+                if(fibs.empty()) { fibs.push_back(BigInt(0, 2090)); }
+                fibs.push_back(BigInt(1, 2090));
+                //if(fibs.empty()) { fibs.push_back(BigInt(0, theoreticalSize)); }
+                //fibs.push_back(BigInt(1, theoreticalSize));
                 break;
             default:
                 BigInt a = BigInt(0, fibs[i - 1].getSize() + 1);
+                //BigInt a = BigInt(0, theoreticalSize);
                 a = fibs[i - 1] + fibs[i - 2];
                 fibs.push_back(a);
                 break;
@@ -119,8 +68,6 @@ BigInt Fibonacci::getFib(unsigned int n) {
 
     return fibs[n];
 }
-
-
 
 void Fibonacci::showFib(unsigned int n) {
     if(!(n < fibs.size())) getFib(n);

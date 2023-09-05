@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Facultate/Anul IV/Licenta/licenta/main.cpp" "CMakeFiles/Project_CLion.dir/main.cpp.obj" "gcc" "CMakeFiles/Project_CLion.dir/main.cpp.obj.d"
   "D:/Facultate/Anul IV/Licenta/licenta/stressTest.cpp" "CMakeFiles/Project_CLion.dir/stressTest.cpp.obj" "gcc" "CMakeFiles/Project_CLion.dir/stressTest.cpp.obj.d"
   "D:/Facultate/Anul IV/Licenta/licenta/sysinfo.cpp" "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj" "gcc" "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj.d"
+  "D:/Facultate/Anul IV/Licenta/licenta/workloads.cpp" "CMakeFiles/Project_CLion.dir/workloads.cpp.obj" "gcc" "CMakeFiles/Project_CLion.dir/workloads.cpp.obj.d"
   )
 
 # Targets to which this target links.

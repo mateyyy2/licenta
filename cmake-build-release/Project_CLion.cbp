@@ -133,6 +133,12 @@
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/sysinfo.h">
 			<Option target="Project_CLion"/>
 		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/workloads.cpp">
+			<Option target="Project_CLion"/>
+		</Unit>
+		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/workloads.h">
+			<Option target="Project_CLion"/>
+		</Unit>
 		<Unit filename="D:/Facultate/Anul IV/Licenta/licenta/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

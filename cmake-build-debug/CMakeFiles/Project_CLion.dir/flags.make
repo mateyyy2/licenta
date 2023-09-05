@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -fopenmp -g -fdiagnostics-color=always
+CXX_FLAGS = -Wall -Wextra -g -fdiagnostics-color=always
 

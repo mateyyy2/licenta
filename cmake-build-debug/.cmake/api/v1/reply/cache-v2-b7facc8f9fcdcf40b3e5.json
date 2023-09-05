@@ -239,7 +239,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "-Wall -Wextra"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_DEBUG",
@@ -950,66 +950,6 @@
 			"value" : "Project_CLion"
 		},
 		{
-			"name" : "CMAKE_PROJECT_VERSION",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "1.0.0"
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_MAJOR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "1"
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_MINOR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "0"
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_PATCH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "0"
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_TWEAK",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_RANLIB",
 			"properties" : 
 			[
@@ -1422,18 +1362,6 @@
 			"value" : "[-fopenmp][C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/libgomp.dll.a][C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/x86_64-w64-mingw32/lib/libmingwthrd.a][C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/x86_64-w64-mingw32/lib/libmingwthrd.a][v4.5()]"
 		},
 		{
-			"name" : "OPENCL_SDK_BUILD_SAMPLES",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
 			"name" : "OpenMP_COMPILE_RESULT_CXX_fopenmp",
 			"properties" : 
 			[
@@ -1648,42 +1576,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
-		},
-		{
-			"name" : "hwinfo_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "D:/Facultate/Anul IV/Licenta/licenta/cmake-build-debug/include/hwinfo"
-		},
-		{
-			"name" : "hwinfo_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "OFF"
-		},
-		{
-			"name" : "hwinfo_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "D:/Facultate/Anul IV/Licenta/licenta/include/hwinfo"
 		}
 	],
 	"kind" : "cache",

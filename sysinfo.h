@@ -24,7 +24,7 @@ class CPUID {
     uint32_t regs[4];
 
 public:
-    explicit CPUID(unsigned funcID, unsigned subFuncID) {
+    inline explicit CPUID(unsigned funcID, unsigned subFuncID) {
 #ifdef _WIN32
         __cpuidex((int *)regs, (int)funcID, (int)subFuncID);
 
@@ -54,13 +54,12 @@ private:
     static const uint32_t LVL_TYPE  = 0x0000FF00;
     static const uint32_t LVL_CORES = 0x0000FFFF;
 
-    // Attributes
+    // CPU Attributes
     string mVendorID;
     string mModelName;
     int    mNumSMT;
     int    mNumCores;
     int    mNumLogCpus;
-    float  mCPUMHz;
     bool   mIsHTT;
     bool   mIsSSE;
     bool   mIsSSE2;
@@ -72,12 +71,18 @@ private:
 
 public:
     CPUInfo();
-    string vendor() const { return mVendorID; }
+    string vendor()             const { return mVendorID; }
     string  model()             const { return mModelName;  }
     int     cores()             const { return mNumCores;   }
-    float   cpuSpeedInMHz()     const { return mCPUMHz;     }
-    bool    isHyperThreaded()   const { return mIsHTT;      }
     int     logicalCpus()       const { return mNumLogCpus; }
+    bool    isHyperThreaded()   const { return mIsHTT;      }
+    bool    isSSE()             const { return mIsSSE;      }
+    bool    isSSE2()            const { return mIsSSE2;     }
+    bool    isSSE3()            const { return mIsSSE3;     }
+    bool    isSSE41()           const { return mIsSSE41;    }
+    bool    isSSE42()           const { return mIsSSE42;    }
+    bool    isAVX()             const { return mIsAVX;      }
+    bool    isAVX2()            const { return mIsAVX2;     }
 };
 
 #endif //PROJECT_CLION_SYSINFO_H

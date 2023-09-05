@@ -539,6 +539,7 @@ int main() {
 
     int opt;
     do {
+        cout << "Evaluarea performantei procesoarelor x86-64\n\n";
         mainMenu();
 //        Fibonacci a;
 //        a.showFib(10);

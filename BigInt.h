@@ -11,34 +11,6 @@
 #include <cassert>
 #include <iomanip>
 
-//#define MAX(x,y) ((x) > (y) ? (x) : (y))
-//
-//#define MAX_UNIT_VALUE (ULONG_MAX >> 2)
-//#define BASE1 10
-//#define BASE2 1000000000
-
-//using namespace std;
-
-//class BigInt {
-//    friend std::ostream& operator<< (std::ostream& os, const BigInt& big);
-//
-//private:
-//    static unsigned long carry;
-//    std::vector<unsigned long> digits;
-//
-//public:
-//    BigInt(unsigned long digit);
-//    BigInt(BigInt big1, BigInt big2);
-//
-//    unsigned long operator() (const unsigned long n1, const unsigned long n2);
-//    unsigned long getDigit(int index);
-//
-//};
-
-//inline ostream& operator<< (ostream& os, const BigInt& ins_i);
-
-
-
 class BigInt {
 private:
     int* carry;

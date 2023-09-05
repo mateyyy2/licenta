@@ -7,8 +7,11 @@
 
 #include <iomanip>
 #include <iostream>
+#include <cstdlib>
 
-#include "stressTest.h"
+//#include "stressTest.h"
+#include "benchmark.h"
+#include "workloads.h"
 
 void clear();
 void mainMenu();

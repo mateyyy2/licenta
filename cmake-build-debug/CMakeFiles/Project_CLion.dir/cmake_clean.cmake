@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project_CLion.dir/stressTest.cpp.obj.d"
   "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj"
   "CMakeFiles/Project_CLion.dir/sysinfo.cpp.obj.d"
+  "CMakeFiles/Project_CLion.dir/workloads.cpp.obj"
+  "CMakeFiles/Project_CLion.dir/workloads.cpp.obj.d"
   "Project_CLion.exe"
   "Project_CLion.exe.manifest"
   "Project_CLion.pdb"

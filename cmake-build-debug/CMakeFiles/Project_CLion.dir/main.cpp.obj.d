@@ -191,13 +191,11 @@ CMakeFiles/Project_CLion.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/cpuid.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/omp.h \
  D:\Facultate\Anul\ IV\Licenta\licenta\interface.h \
- D:\Facultate\Anul\ IV\Licenta\licenta\stressTest.h \
+ D:\Facultate\Anul\ IV\Licenta\licenta\benchmark.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/atomic \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/atomic_base.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/atomic_lockfree_defines.h \
- D:\Facultate\Anul\ IV\Licenta\licenta\Fibonacci.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cassert \
- C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/x86_64-w64-mingw32/include/assert.h \
+ D:\Facultate\Anul\ IV\Licenta\licenta\BigInt.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/algorithmfwd.h \
@@ -215,6 +213,9 @@ CMakeFiles/Project_CLion.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
- D:\Facultate\Anul\ IV\Licenta\licenta\BigInt.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cassert \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/x86_64-w64-mingw32/include/assert.h \
+ D:\Facultate\Anul\ IV\Licenta\licenta\Fibonacci.h \
+ D:\Facultate\Anul\ IV\Licenta\licenta\workloads.h \
  D:\Facultate\Anul\ IV\Licenta\licenta\MillerRabin.h \
  D:\Facultate\Anul\ IV\Licenta\licenta\FFT.h

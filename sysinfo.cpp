@@ -5,7 +5,7 @@
 #include "sysinfo.h"
 
 CPUInfo::CPUInfo() {
-    // Get vendor name EAX=0
+    // vendor
     CPUID cpuID0(0, 0);
     uint32_t HFS = cpuID0.EAX();
     mVendorID += string((const char *)&cpuID0.EBX(), 4);
@@ -13,16 +13,16 @@ CPUInfo::CPUInfo() {
     mVendorID += string((const char *)&cpuID0.ECX(), 4);
     // Get SSE instructions availability
     CPUID cpuID1(1, 0);
-//    mIsHTT   = cpuID1.EDX() & AVX_POS;
-//    mIsSSE   = cpuID1.EDX() & SSE_POS;
-//    mIsSSE2  = cpuID1.EDX() & SSE2_POS;
-//    mIsSSE3  = cpuID1.ECX() & SSE3_POS;
-//    mIsSSE41 = cpuID1.ECX() & SSE41_POS;
-//    mIsSSE42 = cpuID1.ECX() & SSE41_POS;
-//    mIsAVX   = cpuID1.ECX() & AVX_POS;
+    mIsHTT   = cpuID1.EDX() & 0x10000000;
+    mIsSSE   = cpuID1.EDX() & SSE_POS;
+    mIsSSE2  = cpuID1.EDX() & SSE2_POS;
+    mIsSSE3  = cpuID1.ECX() & SSE3_POS;
+    mIsSSE41 = cpuID1.ECX() & SSE41_POS;
+    mIsSSE42 = cpuID1.ECX() & SSE41_POS;
+    mIsAVX   = cpuID1.ECX() & AVX_POS;
     // Get AVX2 instructions availability
     CPUID cpuID7(7, 0);
-//    mIsAVX2  = cpuID7.EBX() & AVX2_POS;
+    mIsAVX2  = cpuID7.EBX() & AVX2_POS;
 
     string upVId = mVendorID;
     for_each(upVId.begin(), upVId.end(), [](char& in) { in = ::toupper(in); });
@@ -71,10 +71,10 @@ CPUInfo::CPUInfo() {
             mNumCores = mNumLogCpus = 1;
         }
     } else {
-        cout<< "Unexpected vendor id" <<endl;
+        cout << "Unexpected vendor id" <<endl;
     }
-    // Get processor brand string
-    // This seems to be working for both Intel & AMD vendors
+
+    // model
     for(int i=0x80000002; i<0x80000005; ++i) {
         CPUID cpuID(i, 0);
         mModelName += string((const char*)&cpuID.EAX(), 4);
