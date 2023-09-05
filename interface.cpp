@@ -50,7 +50,7 @@ void stressTestMenu() {
         cin >> opt;
 
         switch(opt) {
-            case 1: stressTestWithIterations(10); break;
+            case 1: stressTestAllCore(10); break;
             case 2: clear(); break;
             default: cout << "Invalid choice. Please try again.\n"; break;
         }
@@ -77,7 +77,7 @@ void benchmarkMenu() {
         cin >> opt;
 
         switch(opt) {
-            case 1: benchmark(); break;
+            case 1: benchmarkSingleCore(5000); break;
             case 2: cout << "Multi-threaded benchmark not yet available.\n"; break;
             case 3: clear(); break;
             default: cout << "Invalid choice. Please try again.\n"; break;

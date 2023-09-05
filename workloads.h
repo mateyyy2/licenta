@@ -22,8 +22,8 @@
 //
 //};
 
-void computeFibToN(const int n);
-void stressTest();
-void stressTestWithIterations(const int n);
+void computeFibToN(const int n, bool lastPrint);
+void stressTestAllCore(const int n);
+void benchmarkSingleCore(const int n);
 
 #endif //PROJECT_CLION_WORKLOADS_H
