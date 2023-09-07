@@ -5,13 +5,13 @@
 #include "sysinfo.h"
 
 CPUInfo::CPUInfo() {
-    // vendor
+    // Get vendor
     CPUID cpuID0(0, 0);
     uint32_t HFS = cpuID0.EAX();
     mVendorID += string((const char *)&cpuID0.EBX(), 4);
     mVendorID += string((const char *)&cpuID0.EDX(), 4);
     mVendorID += string((const char *)&cpuID0.ECX(), 4);
-    // Get SSE instructions availability
+    // Get SIMD data
     CPUID cpuID1(1, 0);
     mIsHTT   = cpuID1.EDX() & 0x10000000;
     mIsSSE   = cpuID1.EDX() & SSE_POS;
@@ -29,7 +29,7 @@ CPUInfo::CPUInfo() {
     // Get num of cores
     if (upVId.find("INTEL") != std::string::npos) {
         if(HFS >= 11) {
-            for (int lvl=0; lvl<MAX_INTEL_TOP_LVL; ++lvl) {
+            for (int lvl = 0; lvl < MAX_INTEL_TOP_LVL; ++lvl) {
                 CPUID cpuID4(0x0B, lvl);
                 uint32_t currLevel = (LVL_TYPE & cpuID4.ECX())>>8;
                 switch(currLevel) {
@@ -38,7 +38,7 @@ CPUInfo::CPUInfo() {
                     default: break;
                 }
             }
-            mNumCores = mNumLogCpus/mNumSMT;
+            mNumCores = mNumLogCpus / mNumSMT;
         } else {
             if (HFS>=1) {
                 mNumLogCpus = (cpuID1.EBX() >> 16) & 0xFF;
@@ -71,7 +71,7 @@ CPUInfo::CPUInfo() {
             mNumCores = mNumLogCpus = 1;
         }
     } else {
-        cout << "Unexpected vendor id" <<endl;
+        cout << "Unexpected vendor ID" << endl;
     }
 
     // model

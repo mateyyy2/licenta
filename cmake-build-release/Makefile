@@ -152,30 +152,6 @@ BigInt.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/BigInt.cpp.s
 .PHONY : BigInt.cpp.s
 
-FFT.obj: FFT.cpp.obj
-.PHONY : FFT.obj
-
-# target to build an object file
-FFT.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/FFT.cpp.obj
-.PHONY : FFT.cpp.obj
-
-FFT.i: FFT.cpp.i
-.PHONY : FFT.i
-
-# target to preprocess a source file
-FFT.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/FFT.cpp.i
-.PHONY : FFT.cpp.i
-
-FFT.s: FFT.cpp.s
-.PHONY : FFT.s
-
-# target to generate assembly for a file
-FFT.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/FFT.cpp.s
-.PHONY : FFT.cpp.s
-
 Fibonacci.obj: Fibonacci.cpp.obj
 .PHONY : Fibonacci.obj
 
@@ -199,54 +175,6 @@ Fibonacci.s: Fibonacci.cpp.s
 Fibonacci.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/Fibonacci.cpp.s
 .PHONY : Fibonacci.cpp.s
-
-MillerRabin.obj: MillerRabin.cpp.obj
-.PHONY : MillerRabin.obj
-
-# target to build an object file
-MillerRabin.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.obj
-.PHONY : MillerRabin.cpp.obj
-
-MillerRabin.i: MillerRabin.cpp.i
-.PHONY : MillerRabin.i
-
-# target to preprocess a source file
-MillerRabin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.i
-.PHONY : MillerRabin.cpp.i
-
-MillerRabin.s: MillerRabin.cpp.s
-.PHONY : MillerRabin.s
-
-# target to generate assembly for a file
-MillerRabin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/MillerRabin.cpp.s
-.PHONY : MillerRabin.cpp.s
-
-benchmark.obj: benchmark.cpp.obj
-.PHONY : benchmark.obj
-
-# target to build an object file
-benchmark.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/benchmark.cpp.obj
-.PHONY : benchmark.cpp.obj
-
-benchmark.i: benchmark.cpp.i
-.PHONY : benchmark.i
-
-# target to preprocess a source file
-benchmark.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/benchmark.cpp.i
-.PHONY : benchmark.cpp.i
-
-benchmark.s: benchmark.cpp.s
-.PHONY : benchmark.s
-
-# target to generate assembly for a file
-benchmark.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/benchmark.cpp.s
-.PHONY : benchmark.cpp.s
 
 interface.obj: interface.cpp.obj
 .PHONY : interface.obj
@@ -295,30 +223,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-stressTest.obj: stressTest.cpp.obj
-.PHONY : stressTest.obj
-
-# target to build an object file
-stressTest.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/stressTest.cpp.obj
-.PHONY : stressTest.cpp.obj
-
-stressTest.i: stressTest.cpp.i
-.PHONY : stressTest.i
-
-# target to preprocess a source file
-stressTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/stressTest.cpp.i
-.PHONY : stressTest.cpp.i
-
-stressTest.s: stressTest.cpp.s
-.PHONY : stressTest.s
-
-# target to generate assembly for a file
-stressTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project_CLion.dir\build.make CMakeFiles/Project_CLion.dir/stressTest.cpp.s
-.PHONY : stressTest.cpp.s
 
 sysinfo.obj: sysinfo.cpp.obj
 .PHONY : sysinfo.obj
@@ -380,27 +284,15 @@ help:
 	@echo ... BigInt.obj
 	@echo ... BigInt.i
 	@echo ... BigInt.s
-	@echo ... FFT.obj
-	@echo ... FFT.i
-	@echo ... FFT.s
 	@echo ... Fibonacci.obj
 	@echo ... Fibonacci.i
 	@echo ... Fibonacci.s
-	@echo ... MillerRabin.obj
-	@echo ... MillerRabin.i
-	@echo ... MillerRabin.s
-	@echo ... benchmark.obj
-	@echo ... benchmark.i
-	@echo ... benchmark.s
 	@echo ... interface.obj
 	@echo ... interface.i
 	@echo ... interface.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... stressTest.obj
-	@echo ... stressTest.i
-	@echo ... stressTest.s
 	@echo ... sysinfo.obj
 	@echo ... sysinfo.i
 	@echo ... sysinfo.s

@@ -38,8 +38,7 @@ public:
     void setDigits(int* digits);
     bool setDigit(int value, int index);
     bool hasCarry();
-
-    //void rightShift();
+    
     BigInt & operator=(const BigInt& rhs);
     BigInt & operator+=(const BigInt& x);
     BigInt & operator-=(const BigInt& x);

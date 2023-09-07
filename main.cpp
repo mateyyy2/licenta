@@ -10,12 +10,12 @@
 #include <unistd.h>
 #include <cpuid.h>
 
-#include <omp.h>
+//#include <omp.h>
 
 #include "interface.h"
 #include "Fibonacci.h"
-#include "MillerRabin.h"
-#include "FFT.h"
+//#include "MillerRabin.h"
+//#include "FFT.h"
 
 
 using namespace std;
@@ -70,7 +70,7 @@ vector<complex<double>> DFT(vector<complex<double>> X) { // qubytes
 
 
 // new
-//const double PI = acos(-1);
+const double PI = acos(-1);
 
 vector<complex<double>> computeDFT(const vector<complex<double>>& input) {
     int N = input.size();
@@ -165,61 +165,61 @@ vector<complex<double>> computeDFT(const vector<complex<double>>& input) {
 //}
 
 // cp-algorithms FFT
-void CP_FFT(vector<complex<double>>& input) {
-    int N = input.size();
-    if(N == 1) return;
-
-    vector<complex<double>> even(N / 2), odd(N / 2);
-    for(int i = 0; 2 * i < N; i++) {
-        even[i] = input[2 * i];
-        odd[i] = input[2 * i + 1];
-    }
-
-    CP_FFT(even);
-    CP_FFT(odd);
-
-    double angle = 2 * PI / N;
-    complex<double> w(1), wn(cos(angle), sin(angle));
-
-    for(int i = 0; i < N / 2; i++) {
-        input[i] = even[i] + w * odd[i];
-        input[i + N / 2] = even[i] - w * odd[i];
-
-        w *= wn;
-    }
-}
-
-//void computeFFTRecursive(vector<complex<double>>& input, bool inverted) {
+//void CP_FFT(vector<complex<double>>& input) {
 //    int N = input.size();
-//    if(N <= 1) return;
+//    if(N == 1) return;
 //
-//    // Divide
 //    vector<complex<double>> even(N / 2), odd(N / 2);
-//    for(int i = 0; i < N / 2; i++) {
-//        even[i] = input[i * 2];
-//        odd[i] = input[i * 2 + 1];
+//    for(int i = 0; 2 * i < N; i++) {
+//        even[i] = input[2 * i];
+//        odd[i] = input[2 * i + 1];
 //    }
 //
-//    // Conquer
-//    computeFFTRecursive(even, inverted);
-//    computeFFTRecursive(odd, inverted);
+//    CP_FFT(even);
+//    CP_FFT(odd);
 //
-//    // Combine
-//    double angle = 2 * PI / N * (inverted ? -1 : 1);
+//    double angle = 2 * PI / N;
 //    complex<double> w(1), wn(cos(angle), sin(angle));
 //
-//    for(int k = 0; k < N / 2; k++) {
-//        input[k] = even[k] + w * odd[k];
-//        input[k + N / 2] = even[k] - w * odd[k];
-//
-//        if(inverted) {
-//            input[k] /= 2;
-//            input[k + N / 2] /= 2;
-//        }
+//    for(int i = 0; i < N / 2; i++) {
+//        input[i] = even[i] + w * odd[i];
+//        input[i + N / 2] = even[i] - w * odd[i];
 //
 //        w *= wn;
 //    }
 //}
+
+void computeFFTRecursive(vector<complex<double>>& input, bool inverted) {
+    int N = input.size();
+    if(N <= 1) return;
+
+    // Divide
+    vector<complex<double>> even(N / 2), odd(N / 2);
+    for(int i = 0; i < N / 2; i++) {
+        even[i] = input[i * 2];
+        odd[i] = input[i * 2 + 1];
+    }
+
+    // Conquer
+    computeFFTRecursive(even, inverted);
+    computeFFTRecursive(odd, inverted);
+
+    // Combine
+    double angle = 2 * PI / N * (inverted ? -1 : 1);
+    complex<double> w(1), wn(cos(angle), sin(angle));
+
+    for(int k = 0; k < N / 2; k++) {
+        input[k] = even[k] + w * odd[k];
+        input[k + N / 2] = even[k] - w * odd[k];
+
+        if(inverted) {
+            input[k] /= 2;
+            input[k + N / 2] /= 2;
+        }
+
+        w *= wn;
+    }
+}
 
 //vector<int> multiplyPolynomialsFFT(vector<int> const& A, vector<int> const& B) {
 //    int N = 1;
@@ -275,28 +275,6 @@ void CP_FFT(vector<complex<double>>& input) {
 //
 //}
 
-//void computeFFTRecursive_helper(vector<complex<double>>& input, int N, int s) {
-//    if(N <= 1) return;
-//
-//    // Divide
-//    vector<complex<double>> even(N/2), odd(N/2);
-//    for(int i = 0; i < N / 2; i++) {
-//        even[i] = input[i * 2 * s];
-//        odd[i] = input[(i * 2 + 1) * s];
-//    }
-//
-//    // Conquer
-//    computeFFTRecursive_helper(even, N / 2, s * 2);
-//    computeFFTRecursive_helper(odd, N / 2, s * 2);
-//
-//    // Combine
-//    for(int k = 0; k < N / 2; k++) {
-//        complex<double> t = polar(1.0, -2 * PI * k / N) * odd[k];
-//
-//        input[k * s] = even[k] + t;
-//        input[(k + N / 2) * s] = even[k] - t;
-//    }
-//}
 //
 //vector<complex<double>> computeFFTRecursive(vector<complex<double>> input) {
 //    int N = input.size();
@@ -358,27 +336,27 @@ vector<int> fib(int N)
     return F1[N];
 }
 
-vector<int> fibOMP(int N) {
-    vector<vector<int>> F1(N+1);
-    F1[1] = {1};
-    F1[2] = {1};
-
-#pragma omp parallel
-    {
-#pragma omp single
-        {
-            for (int i = 3; i <= N; i++) {
-#pragma omp task firstprivate(i)
-                {
-                    F1[i] = add(F1[i-1], F1[i-2]);
-                }
-            }
-        }
-    }
-#pragma omp taskwait
-
-    return F1[N];
-}
+//vector<int> fibOMP(int N) {
+//    vector<vector<int>> F1(N+1);
+//    F1[1] = {1};
+//    F1[2] = {1};
+//
+//#pragma omp parallel
+//    {
+//#pragma omp single
+//        {
+//            for (int i = 3; i <= N; i++) {
+//#pragma omp task firstprivate(i)
+//                {
+//                    F1[i] = add(F1[i-1], F1[i-2]);
+//                }
+//            }
+//        }
+//    }
+//#pragma omp taskwait
+//
+//    return F1[N];
+//}
 
 
 
@@ -449,10 +427,10 @@ int main() {
 
     vector<complex<double>> test = {1, 4, 9, 16};
 
-    cout << endl << "Test Dataset: " << endl;
-    for(const auto& val : test) {
-        cout << val << endl;
-    }
+//    cout << endl << "Test Dataset: " << endl;
+//    for(const auto& val : test) {
+//        cout << val << endl;
+//    }
 
 //    vector<complex<double>> outputDFT = computeDFT(input);
 //    vector<complex<double>> outputDFTold = DFT(input);
@@ -472,9 +450,9 @@ int main() {
     //computeFFTRecursive(input);
     //computeFFTRecursive(input, false);
 
-    unsigned int numThreads = thread::hardware_concurrency();
-    vector<thread> threads;
-    cout << "Hardware Concurrency = " << numThreads << endl;
+//    unsigned int numThreads = thread::hardware_concurrency();
+//    vector<thread> threads;
+//    cout << "Hardware Concurrency = " << numThreads << endl;
 
 
 
@@ -547,26 +525,6 @@ int main() {
 
 //        BigInt x(1325, 100);
 //        x.print();
-
-//        BigInt fn(1, 1000);
-//        BigInt fn_minus_1(1, 1000);
-//
-//        long count = 3;
-//
-//        while (1)
-//        {
-//            fn = fn - fn_minus_1;
-//            fn_minus_1 = fn + fn_minus_1;
-//            fn = fn_minus_1 * 2 - fn;
-//
-//            if (fn.getDigit(999) > 0)
-//                break;
-//
-//            count++;
-//        }
-//
-//        fn.print();
-//        cout << "The " << count << " term of the fibonacci sequence is the first to contain at least 100 digits." << endl;
 
         switch(opt) {
             case 1: stressTestMenu(); break;

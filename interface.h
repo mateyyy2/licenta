@@ -10,7 +10,7 @@
 #include <cstdlib>
 
 //#include "stressTest.h"
-#include "benchmark.h"
+//#include "benchmark.h"
 #include "workloads.h"
 
 void clear();

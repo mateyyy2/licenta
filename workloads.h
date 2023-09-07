@@ -15,12 +15,9 @@
 #include "Fibonacci.h"
 #include "BigInt.h"
 
-//class Workloads {
-//private:
+
 //    void computeFibWithTimer();
-//
-//
-//};
+
 
 void computeFibToN(const int n, bool lastPrint);
 void stressTestAllCore(const int n);

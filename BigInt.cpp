@@ -185,13 +185,7 @@ BigInt &BigInt::operator-=(const BigInt &x) {
     bool thisLarger = true;
     int lastIndex = this->size - 1;
     int *digitsCopy = x.getDigitsCopy();
-
     int *largeRef, *smallRef;
-
-//    if(this->size != x.getSize()) {
-//        std::cout << "Mismatched BigInt sizes in -= operator.\n";
-//        return *(new BigInt(0, 1));
-//    }
 
     if(xSig > thisSig) { thisLarger = false; }
     else if(xSig == thisSig) {
